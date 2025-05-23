@@ -20,7 +20,13 @@ Route::get('/', function () {
     return view('pages.auth.login');
 });
 
+
+Route::get('/home', function () {
+    return view('pages.dashboard');
+});
+
 // Route::get('/home', [HomeController::class, 'index'])->name('home'); 
+
 // Route::resource('/user', UserController::class);
 // Route::resource('/company_partner', CompanyPartnerController::class);{{  }}
 // Route::resource('/rating', RatingController::class);
@@ -39,21 +45,29 @@ Route::get('/', function () {
 // Route::get('/kasau-form', [FormController::class, 'form'])->name('kasau-form');
 // End Kasau Route
 
-Route::name('admin.')->prefix('admin')->middleware('admin')->group(function() {
+// Route::name('admin.')->prefix('admin')->middleware('admin')->group(function() {
+//     Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//     Route::resource('/user', UserController::class);
+//     Route::resource('/company_partner', CompanyPartnerController::class);
+//     Route::get('/rating', [\App\Http\Controllers\RatingController::class, 'index'])->name('rating');
+//     Route::get('/form', [\App\Http\Controllers\FormController::class, 'index'])->name('form');
+//     Route::get('/form/{id}', [\App\Http\Controllers\FormController::class, 'show'])->name('form.show');
+
+//     // News Category
+//     Route::resource('/news-category', NewsCategoryController::class);
+//     Route::resource('/news-category/{category_id}/new', ControllersNewsController::class);
+// });
+
+Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::resource('/user', UserController::class);
     Route::resource('/company_partner', CompanyPartnerController::class);
     Route::get('/rating', [\App\Http\Controllers\RatingController::class, 'index'])->name('rating');
     Route::get('/form', [\App\Http\Controllers\FormController::class, 'index'])->name('form');
     Route::get('/form/{id}', [\App\Http\Controllers\FormController::class, 'show'])->name('form.show');
+
     // News Category
     Route::resource('/news-category', NewsCategoryController::class);
-    // Route::post('/news-category', [\App\Http\Controllers\NewsCategoryController::class, 'store'])->name('news-category.store'); 
-    // Route::get('/news-category/create', [\App\Http\Controllers\NewsCategoryController::class, 'create'])->name('news-category.create');
-    // Route::get('/news-category/{id}/edit', [\App\Http\Controllers\NewsCategoryController::class, 'edit'])->name('news-category.edit');
-    // Route::post('/news-category/{id}/update', [\App\Http\Controllers\NewsCategoryController::class, 'update'])->name('news-category.update');
-    // Route::delete('/news-category/{id}', [\App\Http\Controllers\NewsCategoryController::class, 'destroy'])->name('news-category.destroy');
-    // End News Category
     Route::resource('/news-category/{category_id}/new', ControllersNewsController::class);
 });
 

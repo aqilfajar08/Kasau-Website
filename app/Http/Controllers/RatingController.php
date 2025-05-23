@@ -21,6 +21,8 @@ class RatingController extends Controller
     // untuk user 
     public function store(Request $request)
     {
+
+    // dd($request->all());
     $request->validate([
         'rating' => 'required|integer|min:1|max:5',
         'review' => 'nullable|string|max:1000',

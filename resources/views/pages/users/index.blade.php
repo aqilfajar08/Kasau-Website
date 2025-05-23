@@ -14,7 +14,7 @@
             <div class="section-header">
                 <h1>Users</h1>
                 <div class="section-header-button">
-                    <a href="{{ route('admin.user.create') }}"
+                    <a href="{{ route('user.create') }}"
                         class="btn btn-primary">Add New</a>
                 </div>
                 <div class="section-header-breadcrumb">
@@ -75,9 +75,9 @@
                                                 <div class="table-links">
                                                     <a href="#">View</a>
                                                     <div class="bullet"></div>
-                                                    <a href="{{ route('admin.user.edit', $user->id) }}">Edit</a>
+                                                    <a href="{{ route('user.edit', $user->id) }}">Edit</a>
                                                     <div class="bullet"></div>
-                                                    <form action="{{ route('admin.user.destroy', $user->id) }}" 
+                                                    <form action="{{ route('user.destroy', $user->id) }}" 
                                                         method="POST" 
                                                         class="d-inline" 
                                                         onsubmit="return confirm('Are you sure want to delete this user?')">

@@ -13,7 +13,7 @@ class NewsController extends Controller
         $category = NewsCategory::find($category_id);
 
         if (!$category) {
-            return redirect()->route('admin.news-category.index') // atur sesuai route kategori kamu
+            return redirect()->route('news-category.index') // atur sesuai route kategori kamu
                 ->with('error', 'Kategori tidak ditemukan.');
         }
 
@@ -50,7 +50,7 @@ class NewsController extends Controller
 
         News::create($data);
 
-        return redirect()->route('admin.new.index', $category_id);
+        return redirect()->route('new.index', $category_id);
     }
 
     public function edit($category_id, $news_id)
@@ -88,7 +88,7 @@ class NewsController extends Controller
 
         $news->update($data);
 
-        return redirect()->route('admin.new.index', $category_id);
+        return redirect()->route('new.index', $category_id);
     }
 
     public function destroy($category_id, $news_id)
@@ -100,7 +100,7 @@ class NewsController extends Controller
 
         // Jika news tidak ditemukan
         if (!$news) {
-            return redirect()->route('admin.new.index', $category_id)
+            return redirect()->route('new.index', $category_id)
                 ->with('error', 'Berita tidak ditemukan.');
         }
 
@@ -117,7 +117,7 @@ class NewsController extends Controller
         // Hapus data dari database
         $news->delete();
 
-        return redirect()->route('admin.new.index', $category_id)
+        return redirect()->route('new.index', $category_id)
             ->with('success', 'Berita berhasil dihapus.');
     }
 }

@@ -34,7 +34,7 @@
                             <div class="card-header">
                                 <h4>Input Text</h4>
                             </div>
-                            <form action="{{ route('admin.company_partner.update', $company->id) }}" method="POST"
+                            <form action="{{ route('company_partner.update', $company->id) }}" method="POST"
                                 enctype="multipart/form-data">
                                 @csrf @method('PUT')
                                 <div class="card-body">

@@ -15,11 +15,10 @@ class NewsServiceProvider extends ServiceProvider
 
     public function boot()
     {
-// di App\Providers\NewsServiceProvider.php
-View::composer('pages.frontend.index', function ($view) {
-    $latestNews = News::with('category_news')->latest()->take(3)->get();
-    $view->with('latestNews', $latestNews);
-});
-
+        // di App\Providers\NewsServiceProvider.php
+        View::composer('pages.frontend.index', function ($view) {
+            $latestNews = News::with('category_news')->latest()->take(3)->get();
+            $view->with('latestNews', $latestNews);
+        });
     }
 }

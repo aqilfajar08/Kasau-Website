@@ -40,7 +40,7 @@
                             <div class="card-header">
                                 <h4>Input Text</h4>
                             </div>
-                            <form action="{{ route('admin.user.update', $user->id) }}" method="POST">@csrf @method('PUT')
+                            <form action="{{ route('user.update', $user->id) }}" method="POST">@csrf @method('PUT')
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Name</label>

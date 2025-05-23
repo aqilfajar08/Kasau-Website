@@ -42,7 +42,7 @@ class CompanyPartnerController extends Controller
 
         CompanyPartner::create($data);
 
-        return redirect()->route('admin.company_partner.index');
+        return redirect()->route('company_partner.index');
     }
 
     public function edit($id)
@@ -72,7 +72,7 @@ class CompanyPartnerController extends Controller
         $company->name = $request->name;
         $company->save();
 
-        return redirect()->route('admin.company_partner.index');
+        return redirect()->route('company_partner.index');
     }
 
     public function destroy($id) {
@@ -80,6 +80,6 @@ class CompanyPartnerController extends Controller
         $path = public_path('storage/companies/' . $company->image);
         unlink($path);
         $company->delete();
-        return redirect()->route('admin.company_partner.index');
+        return redirect()->route('company_partner.index');
     }
 }

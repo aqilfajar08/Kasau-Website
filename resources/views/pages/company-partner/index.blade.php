@@ -13,7 +13,7 @@
             <div class="section-header">
                 <h1>Company Partner</h1>
                 <div class="section-header-button">
-                    <a href="{{ route('admin.company_partner.create') }}" class="btn btn-primary">Add New</a>
+                    <a href="{{ route('company_partner.create') }}" class="btn btn-primary">Add New</a>
                 </div>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
@@ -58,11 +58,9 @@
                                         <tr>
                                             <td> {{ $company->name }}
                                                 <div class="table-links">
-                                                    {{-- <a href="#">View</a> --}}
-                                                    {{-- <div class="bullet"></div> --}}
-                                                    <a href="{{ route('admin.company_partner.edit', $company->id) }}">Edit</a>
+                                                    <a href="{{ route('company_partner.edit', $company->id) }}">Edit</a>
                                                     <div class="bullet"></div>
-                                                    <form action="{{ route('admin.company_partner.destroy', $company->id) }}" method="POST" enctype="multipart/form-data"
+                                                    <form action="{{ route('company_partner.destroy', $company->id) }}" method="POST" enctype="multipart/form-data"
                                                         class="d-inline"
                                                         onsubmit="return confirm('Are you sure want to delete this company?')">
                                                         @csrf

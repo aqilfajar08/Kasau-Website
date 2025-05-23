@@ -24,10 +24,9 @@
                         </div>
                     </div>
 
-                    <form action="{{ route('admin.new.store', $category->id) }}" method="post" enctype="multipart/form-data" class="divide-y divide-gray-200">
+                    <form action="{{ route('new.store', $category->id) }}" method="post" enctype="multipart/form-data" class="divide-y divide-gray-200">
                         @csrf
                         @method('POST')
-                        
                         <div class="py-8 text-base leading-6 space-y-6 text-gray-700 sm:text-lg sm:leading-7">
                             <div class="flex flex-col">
                                 <label for="title" class="text-sm font-bold text-gray-600 mb-2">Title</label>

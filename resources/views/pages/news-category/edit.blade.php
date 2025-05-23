@@ -21,7 +21,7 @@
                         <h2 class="text-3xl font-bold text-gray-900">Edit Category</h2>
                     </div>
 
-                    <form action="{{ route('admin.news-category.update', $category->id) }}" method="post" class="divide-y divide-gray-200">
+                    <form action="{{ route('news-category.update', $category->id) }}" method="post" class="divide-y divide-gray-200">
                         @csrf
                         @method('PUT')
                         
@@ -38,7 +38,7 @@
                         </div>
                         
                         <div class="pt-4 flex items-center space-x-4">
-                            <a href="{{ route('admin.news-category.index') }}" 
+                            <a href="{{ route('news-category.index') }}" 
                                class="flex justify-center items-center w-full text-gray-900 px-4 py-3 rounded-md focus:outline-none hover:bg-gray-100 transition-colors duration-200">
                                 <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />

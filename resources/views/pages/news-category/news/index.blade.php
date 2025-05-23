@@ -14,7 +14,7 @@
         <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
             <div class="flex justify-between items-center mb-6">
                 <h1 class="text-3xl font-bold text-gray-800">News of {{ $category->name }}</h1>
-                <a href="{{ route('admin.new.create', $category->id) }}" 
+                <a href="{{ route('new.create', $category->id) }}" 
                    class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition duration-200">
                     + Create New
                 </a>
@@ -44,11 +44,11 @@
                             <td class="px-6 py-4 text-sm text-gray-500 max-w-xs truncate">{{ $new->description }}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                                 <div class="flex space-x-2">
-                                    <a href="{{ route('admin.new.edit', [$category->id, $new->id]) }}" 
+                                    <a href="{{ route('new.edit', [$category->id, $new->id]) }}" 
                                        class="text-indigo-600 hover:text-indigo-900 bg-indigo-100 px-3 py-1 rounded-md">
                                         Edit
                                     </a>
-                                    <form action="{{ route('admin.new.destroy', [$category->id, $new->id]) }}" method="POST" enctype="multipart/form-data">
+                                    <form action="{{ route('new.destroy', [$category->id, $new->id]) }}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" 

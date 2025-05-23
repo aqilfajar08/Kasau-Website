@@ -21,7 +21,7 @@
                         </div>
                     </div>
 
-                    <form action="{{ route('admin.new.update', [$category->id, $news->id]) }}" method="POST" enctype="multipart/form-data" class="divide-y divide-gray-200">
+                    <form action="{{ route('new.update', [$category->id, $news->id]) }}" method="POST" enctype="multipart/form-data" class="divide-y divide-gray-200">
                         @csrf
                         @method('PUT')
 

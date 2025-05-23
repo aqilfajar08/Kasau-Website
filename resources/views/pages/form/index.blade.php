@@ -69,7 +69,7 @@
                                             <td>{{ $form->subject }}</td>
                                             <td>{{ $form->message }}</td>   
                                             <td>
-                                                <a href="{{ route('admin.form.show', $form->id) }}">Detail</a>
+                                                <a href="{{ route('form.show', $form->id) }}">Detail</a>
                                             </td>
                                         </tr>
                                     @endforeach

@@ -24,7 +24,7 @@ class NewsCategoryController extends Controller
 
         NewsCategory::create($request->all());
 
-        return redirect()->route('admin.news-category.index');
+        return redirect()->route('news-category.index');
     }
 
     public function edit($category_id) {
@@ -42,7 +42,7 @@ class NewsCategoryController extends Controller
 
         $category->update($request->all());
 
-        return redirect()->route('admin.news-category.index');
+        return redirect()->route('news-category.index');
     }
 
     public function destroy($category_id) {
@@ -50,6 +50,6 @@ class NewsCategoryController extends Controller
 
         $category->delete();
 
-        return redirect()->route('admin.news-category.index');
+        return redirect()->route('news-category.index');
     }
 }
