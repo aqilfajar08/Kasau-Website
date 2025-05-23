@@ -114,11 +114,10 @@
                         <div class="p-4">
                             <span class="text-sm text-blue-500">{{ $news->category->name ?? 'Uncategorized' }}</span>
                             <h3 class="text-lg font-semibold mt-2">{{ $news->title }}</h3>
-                            <p class="text-sm text-gray-600 mt-1 line-clamp-3">{{ Str::limit($news->description, 100) }}</p>
+                            
                         </div>
                     </div>
                 @endforeach
-
             </div>
 
             <div class="mt-6">

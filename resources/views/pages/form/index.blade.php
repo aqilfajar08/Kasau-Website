@@ -67,7 +67,7 @@
                                             <td>{{ $form->first_name }} {{ $form->last_name }}</td>
                                             <td>{{ $form->email }}</td>
                                             <td>{{ $form->subject }}</td>
-                                            <td>{{ $form->message }}</td>   
+                                            <td class="px-6 py-4 text-sm text-gray-500 max-w-xs truncate">{{ $form->message }}</td>   
                                             <td>
                                                 <a href="{{ route('form.show', $form->id) }}">Detail</a>
                                             </td>

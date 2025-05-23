@@ -213,10 +213,11 @@
                                 <div class="text-right">
                                     <button type="submit"
                                         class="bg-gradient-to-r from-orange-500 to-orange-600 text-white font-medium px-6 py-2 rounded-lg
-            hover:shadow-lg transform hover:scale-[1.02] transition-all">
+                                                hover:shadow-lg transform hover:scale-[1.02] transition-all">
                                         Send Message
                                     </button>
                                 </div>
+
                             </div>
                         </form>
 

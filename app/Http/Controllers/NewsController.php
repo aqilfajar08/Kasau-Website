@@ -13,11 +13,11 @@ class NewsController extends Controller
         $category = NewsCategory::find($category_id);
 
         if (!$category) {
-            return redirect()->route('news-category.index') // atur sesuai route kategori kamu
+            return redirect()->route('news-category.index') 
                 ->with('error', 'Kategori tidak ditemukan.');
         }
 
-        $news = $category->news; // jika relasi ada
+        $news = $category->news;
         return view('pages.news-category.news.index', compact('category', 'news'));
     }
 
@@ -33,7 +33,7 @@ class NewsController extends Controller
         $request->validate([
             'title' => 'required',
             'image' => 'required',
-            'description' => 'required',
+            'description' => 'required|max:500',
         ]);
 
         $category = NewsCategory::find($category_id);
@@ -95,26 +95,19 @@ class NewsController extends Controller
     {
         $news = News::find($news_id);
         $category = NewsCategory::find($category_id);
-
-        // dd($category_id);
-
-        // Jika news tidak ditemukan
         if (!$news) {
             return redirect()->route('new.index', $category_id)
                 ->with('error', 'Berita tidak ditemukan.');
         }
 
-        // Cek apakah news memiliki gambar
         if ($news->image) {
             $path = public_path('storage/news/' . $news->image);
 
-            // Cek apakah file gambar ada sebelum dihapus
             if (file_exists($path)) {
                 unlink($path);
             }
         }
 
-        // Hapus data dari database
         $news->delete();
 
         return redirect()->route('new.index', $category_id)

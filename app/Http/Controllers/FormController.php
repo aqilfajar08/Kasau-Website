@@ -34,7 +34,7 @@ class FormController extends Controller
             'email' => 'required|email',
             'phone' => 'required',
             'subject' => 'required',
-            'message' => 'required|max:500',
+            'message' => 'required',
         ]);
 
         Form::create([

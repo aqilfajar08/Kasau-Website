@@ -1,65 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Create News</title>
-    @vite('resources/css/app.css')
-</head>
-<body class="bg-gray-100">
-    <div class="min-h-screen py-6 flex flex-col justify-center sm:py-12">
-        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
-            <div class="relative px-4 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
-                <div class="max-w-md mx-auto">
-                    <div class="flex items-center space-x-5">
-                        <div class="h-14 w-14 bg-blue-500 rounded-full flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                            </svg>
-                        </div>
-                        <div class="block pl-2 font-semibold text-xl text-gray-700">
-                            <h2 class="leading-relaxed">Create New Article</h2>
-                            <p class="text-sm text-gray-500 font-normal leading-relaxed">Enter your article details below</p>
-                        </div>
-                    </div>
+@extends('layouts.app')
 
-                    <form action="{{ route('new.store', $category->id) }}" method="post" enctype="multipart/form-data" class="divide-y divide-gray-200">
-                        @csrf
-                        @method('POST')
-                        <div class="py-8 text-base leading-6 space-y-6 text-gray-700 sm:text-lg sm:leading-7">
-                            <div class="flex flex-col">
-                                <label for="title" class="text-sm font-bold text-gray-600 mb-2">Title</label>
-                                <input type="text" name="title" id="title" 
-                                    class="px-3 py-2 rounded-lg border-2 border-gray-200 focus:outline-none focus:border-blue-500"
-                                    placeholder="Enter article title">
-                            </div>
+@section('title', 'Advanced Forms')
 
-                            <div class="flex flex-col">
-                                <label for="image" class="text-sm font-bold text-gray-600 mb-2">Image</label>
-                                <input type="file" name="image" id="image" 
-                                    class="px-3 py-2 text-sm text-gray-700 bg-white rounded-lg border-2 border-gray-200 focus:outline-none focus:border-blue-500">
-                            </div>
+@push('style')
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="{{ asset('library/bootstrap-daterangepicker/daterangepicker.css') }}">
+    <link rel="stylesheet" href="{{ asset('library/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('library/select2/dist/css/select2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('library/selectric/public/selectric.css') }}">
+    <link rel="stylesheet" href="{{ asset('library/bootstrap-timepicker/css/bootstrap-timepicker.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('library/bootstrap-tagsinput/dist/bootstrap-tagsinput.css') }}">
+@endpush
 
-                            <div class="flex flex-col">
-                                <label for="description" class="text-sm font-bold text-gray-600 mb-2">Description</label>
-                                <textarea name="description" id="description" rows="6" 
-                                    class="px-3 py-2 rounded-lg border-2 border-gray-200 focus:outline-none focus:border-blue-500"
-                                    placeholder="Enter article description"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="pt-4 flex items-center space-x-4">
-                            <button type="submit" 
-                                class="bg-blue-500 flex justify-center items-center w-full text-white px-4 py-3 rounded-md 
-                                focus:outline-none hover:bg-blue-600 transition duration-300 ease-in-out">
-                                Create Article
-                            </button>
-                        </div>
-                    </form>
+@section('main')
+    <div class="main-content">
+        <section class="section">
+            <div class="section-header">
+                <h1>Create a News</h1>
+                <div class="section-header-breadcrumb">
+                    <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+                    <div class="breadcrumb-item"><a href="#">Forms</a></div>
+                    <div class="breadcrumb-item">Create a News</div>
                 </div>
             </div>
-        </div>
+
+            <div class="section-body">
+                <h2 class="section-title">Create a News</h2>
+                <p class="section-lead">We provide advanced input fields, such as date picker, color picker, and so on.</p>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Input Text</h4>
+                            </div>
+                            <form action="{{ route('new.store', $category->id) }}" method="POST"
+                                enctype="multipart/form-data">
+                                @csrf
+                                @method('POST')
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <label for="title">Title</label>
+                                            <input type="text" name="title" id="title" required
+                                                class="form-control @error('title') is-invalid @enderror">
+                                        </div>
+                                        <div class="form-group  flex flex-col">
+                                            <label for="description">Description</label>
+                                            <textarea name="description" id="description"
+                                                class="px-3 py-2 rounded-lg border-2 border-gray-200"
+                                                placeholder="Enter article description"></textarea>
+                                        </div>
+
+                                        <label for="image">Image</label>
+                                        <input type="file" name="image" id="image">
+                                        <!-- button submit -->
+                                        <div class="form-group text-right">
+                                            <button type="submit" class="btn btn-primary">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-</body>
-</html>
+@endsection
+
+@push('scripts')
+    <!-- JS Libraies -->
+    <script src="{{ asset('library/cleave.js/dist/cleave.min.js') }}"></script>
+    <script src="{{ asset('library/cleave.js/dist/addons/cleave-phone.us.js') }}"></script>
+    <script src="{{ asset('library/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
+    <script src="{{ asset('library/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js') }}"></script>
+    <script src="{{ asset('library/bootstrap-timepicker/js/bootstrap-timepicker.min.js') }}"></script>
+    <script src="{{ asset('library/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js') }}"></script>
+    <script src="{{ asset('library/select2/dist/js/select2.full.min.js') }}"></script>
+    <script src="{{ asset('library/selectric/public/jquery.selectric.min.js') }}"></script>
+
+    <!-- Page Specific JS File -->
+    <script src="{{ asset('js/page/forms-advanced-forms.js') }}"></script>
+@endpush

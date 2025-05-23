@@ -261,8 +261,6 @@
                 </a>
             </div>
         </section>
-
-
         @include('components.kasau.footer')
     </div>
 @endsection
