@@ -1,6 +1,6 @@
 @extends('layouts.kasau')
 
-@section('title', 'Kasau Group - Best Leading Shipping Service Company')
+@section('title', 'Kasau Group - About Page')
 
 @section('styles')
     <style>

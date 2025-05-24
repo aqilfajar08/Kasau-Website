@@ -42,24 +42,37 @@
                                     <div class="form-group">
                                         <div class="form-group">
                                             <label for="title">Title</label>
-                                            <input type="text" name="title" id="title" required
+                                            <input type="text" name="title" id="title" value="{{ old('title') }}"
                                                 class="form-control @error('title') is-invalid @enderror">
+                                            @error('title')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
                                         </div>
-                                        <div class="form-group  flex flex-col">
+                                        <div class="form-group flex flex-col">
                                             <label for="description">Description</label>
-                                            <textarea name="description" id="description"
-                                                class="px-3 py-2 rounded-lg border-2 border-gray-200 form-control @error('description') is-invalid @enderror"
-                                                placeholder="Enter article description">
-                                        @error('description')
+                                            <div class="flex justify-between text-sm mb-1">
+                                                <span>Maximum Character: <span id="char-count" class="text-gray-600">0 / 500</span></span>
+                                            </div>
+                                            <textarea name="description" id="description" rows="4" maxlength="500"
+                                                class="p-3 rounded-lg border border-gray-200 @error('description') is-invalid @enderror"
+                                                placeholder="Tulis deskripsi di sini...">{{ old('description') }}</textarea>
+                                            @error('description')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
+                                        </div>
+
+                                        <label for="image">Image</label>
+                                        <input type="file" name="image" id="image" value="{{ old('image') }}"
+                                            class="@error('image') is-invalid @enderror">
+                                        @error('image')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
                                             </div>
                                         @enderror
-                                            </textarea>
-                                        </div>
-
-                                        <label for="image">Image</label>
-                                        <input type="file" name="image" id="image">
                                         <!-- button submit -->
                                         <div class="form-group text-right">
                                             <button type="submit" class="btn btn-primary">
@@ -89,4 +102,27 @@
 
     <!-- Page Specific JS File -->
     <script src="{{ asset('js/page/forms-advanced-forms.js') }}"></script>
+@endpush
+
+@push('scripts')
+    <script>
+        const textarea = document.getElementById('description');
+        const charCountDisplay = document.getElementById('char-count');
+        const maxChars = 245;
+
+        textarea.addEventListener('input', function() {
+            const charCount = this.value.length;
+            charCountDisplay.textContent = `${charCount} / ${maxChars}`;
+
+            if (charCount >= maxChars) {
+                charCountDisplay.classList.remove('text-gray-600');
+                charCountDisplay.classList.add('text-red-600', 'font-bold');
+            } else {
+                charCountDisplay.classList.remove('text-red-600', 'font-bold');
+                charCountDisplay.classList.add('text-gray-600');
+            }
+        });
+
+        textarea.dispatchEvent(new Event('input'));
+    </script>
 @endpush

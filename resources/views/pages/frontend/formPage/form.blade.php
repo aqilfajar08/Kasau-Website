@@ -2,6 +2,22 @@
 
 @section('title', 'Contact Us - Kasau Group')
 
+@push('style')
+    <!-- CSS Libraries -->
+    <link rel="stylesheet"
+        href="{{ asset('library/bootstrap-daterangepicker/daterangepicker.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('library/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('library/select2/dist/css/select2.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('library/selectric/public/selectric.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('library/bootstrap-timepicker/css/bootstrap-timepicker.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('library/bootstrap-tagsinput/dist/bootstrap-tagsinput.css') }}">
+@endpush
+
 @section('styles')
     <style>
         .fade-in {
@@ -105,26 +121,31 @@
 
                             <!-- Social Media -->
                             <div class="absolute bottom-0 left-0 flex gap-4 p-6">
-                            <a href="#" class="hover:text-orange-200 transition-colors">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                                </svg>
-                            </a>
-                            <!-- LinkedIn -->
-                            <a href="#" class="hover:text-orange-200 transition-colors">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                </svg>
-                            </a>
-                            <!-- YouTube -->
-                            <a href="#" class="hover:text-orange-200 transition-colors">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 576 512">
-                                    <path
-                                        d="M549.655 124.083c-6.281-23.65-24.777-42.256-48.317-48.624C457.549 64 288 64 288 64s-169.549 0-213.338 11.459c-23.54 6.368-42.036 24.974-48.317 48.624C16 168.26 16 256 16 256s0 87.74 10.345 131.917c6.281 23.65 24.777 42.256 48.317 48.624C118.451 448 288 448 288 448s169.549 0 213.338-11.459c23.54-6.368 42.036-24.974 48.317-48.624C560 343.74 560 256 560 256s0-87.74-10.345-131.917zM232 336V176l142 80-142 80z" />
-                                </svg>
-                            </a>
+
+                                <!-- Instagram -->
+                                <a href="#" class="hover:text-orange-200 transition-colors">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                    </svg>
+                                </a>
+
+                                <!-- LinkedIn -->
+                                <a href="#" class="hover:text-orange-200 transition-colors">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a>
+
+                                <!-- YouTube -->
+                                <a href="#" class="hover:text-orange-200 transition-colors">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 576 512">
+                                        <path
+                                            d="M549.655 124.083c-6.281-23.65-24.777-42.256-48.317-48.624C457.549 64 288 64 288 64s-169.549 0-213.338 11.459c-23.54 6.368-42.036 24.974-48.317 48.624C16 168.26 16 256 16 256s0 87.74 10.345 131.917c6.281 23.65 24.777 42.256 48.317 48.624C118.451 448 288 448 288 448s169.549 0 213.338-11.459c23.54-6.368 42.036-24.974 48.317-48.624C560 343.74 560 256 560 256s0-87.74-10.345-131.917zM232 336V176l142 80-142 80z" />
+                                    </svg>
+                                </a>
+
                             </div>
                         </div>
                     </div>
@@ -142,15 +163,26 @@
                                         <label class="block text-gray-700 font-medium mb-1" for="first_name">First
                                             Name</label>
                                         <input type="text" id="first_name" name="first_name"
-                                            class="w-full py-2 border-b-2 border-gray-300 focus:border-black focus:outline-none bg-transparent focus:transition-colors duration-300"
-                                            placeholder="First Name" required>
+                                            value="{{ old('first_name') }}"
+                                            class="w-full py-2 border-b-2 border-gray-300 focus:border-black focus:outline-none bg-transparent focus:transition-colors duration-300 @error('first_name') is-invalid @enderror"
+                                            placeholder="First Name">
+                                        @error('first_name')
+                                            <div class="invalid-feedback text-red-700">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
                                     </div>
                                     <div>
                                         <label class="block text-gray-700 font-medium mb-1" for="last_name">Last
                                             Name</label>
-                                        <input type="text" id="last_name" name="last_name"
-                                            class="w-full py-2 border-b-2 border-gray-300 focus:border-black focus:outline-none bg-transparent focus:transition-colors duration-300"
-                                            placeholder="Last Name" required>
+                                        <input type="text" id="last_name" name="last_name" value="{{ old('last_name') }}"
+                                            class="w-full py-2 border-b-2 border-gray-300 focus:border-black focus:outline-none bg-transparent focus:transition-colors duration-300 @error('last_name') is-invalid @enderror"
+                                            placeholder="Last Name">
+                                        @error('last_name')
+                                            <div class="invalid-feedback text-red-700">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -158,15 +190,25 @@
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div>
                                         <label class="block text-gray-700 font-medium mb-1" for="email">Email</label>
-                                        <input type="email" id="email" name="email"
-                                            class="w-full py-2 border-b-2 border-gray-300 focus:border-black focus:outline-none bg-transparent focus:transition-colors duration-300"
-                                            placeholder="Email" required>
+                                        <input type="email" id="email" name="email" value="{{ old('email') }}"
+                                            class="w-full py-2 border-b-2 border-gray-300 focus:border-black focus:outline-none bg-transparent focus:transition-colors duration-300 @error('email') is-invalid @enderror"
+                                            placeholder="Email">
+                                        @error('email')
+                                            <div class="invalid-feedback text-red-700">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
                                     </div>
                                     <div>
                                         <label class="block text-gray-700 font-medium mb-1" for="phone">Phone</label>
-                                        <input type="tel" id="phone" name="phone"
-                                            class="w-full py-2 border-b-2 border-gray-300 focus:border-black focus:outline-none bg-transparent focus:transition-colors duration-300"
-                                            placeholder="Phone Number" required>
+                                        <input type="tel" id="phone" name="phone" value="{{ old('phone') }}"
+                                            class="w-full py-2 border-b-2 border-gray-300 focus:border-black focus:outline-none bg-transparent focus:transition-colors duration-300 @error('phone') is-invalid @enderror"
+                                            placeholder="Phone Number">
+                                        @error('phone')
+                                            <div class="invalid-feedback text-red-700">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -197,14 +239,18 @@
                                     </div>
                                 </div>
 
-
                                 <!-- Message -->
                                 <div>
                                     <label class="block text-gray-700 font-medium mb-1" for="message">Message</label>
                                     <div>
                                         <textarea id="message" name="message" rows="4"
-                                            class="w-full py-2 border-b-2 border-gray-300 focus:border-black focus:outline-none bg-transparent focus:transition-colors duration-300"
-                                            placeholder="Write your message..." required></textarea>
+                                            class="w-full py-2 border-b-2 border-gray-300 focus:border-black focus:outline-none bg-transparent focus:transition-colors duration-300 @error('message') is-invalid @enderror"
+                                            placeholder="Write your message...">{{ old('message') }}</textarea>
+                                        @error('message')
+                                            <div class="invalid-feedback text-red-700">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -222,6 +268,7 @@
 
                     </div>
                 </div>
+
                 <div class="h-[400px] bg-white rounded-2xl mt-8 shadow-lg">
 
                     <!-- Google Map -->
@@ -236,6 +283,21 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+    <!-- JS Libraies -->
+    <script src="{{ asset('library/cleave.js/dist/cleave.min.js') }}"></script>
+    <script src="{{ asset('library/cleave.js/dist/addons/cleave-phone.us.js') }}"></script>
+    <script src="{{ asset('library/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
+    <script src="{{ asset('library/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js') }}"></script>
+    <script src="{{ asset('library/bootstrap-timepicker/js/bootstrap-timepicker.min.js') }}"></script>
+    <script src="{{ asset('library/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js') }}"></script>
+    <script src="{{ asset('library/select2/dist/js/select2.full.min.js') }}"></script>
+    <script src="{{ asset('library/selectric/public/jquery.selectric.min.js') }}"></script>
+
+    <!-- Page Specific JS File -->
+    <script src="{{ asset('js/page/forms-advanced-forms.js') }}"></script>
+@endpush
 
 @section('scripts')
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

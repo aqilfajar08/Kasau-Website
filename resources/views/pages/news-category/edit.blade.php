@@ -41,8 +41,8 @@
                                     <div class="form-group">
                                         <div class="form-group">
                                             <label>Name</label>
-                                            <input type="text" name="name" id="name" required
-                                                value="{{ $category->name }}"
+                                            <input type="text" name="name" id="name"
+                                                value="{{ old('name', $category->name) }}"
                                                 class="form-control @error('name') is-invalid @enderror">
                                             @error('name')
                                                 <div class="invalid-feedback">

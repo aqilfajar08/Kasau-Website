@@ -1,5 +1,5 @@
 @extends('layouts.kasau')
-@section('title', 'Kasau Group - Best Leading Shipping Service Company')
+@section('title', 'Kasau Group - KSSA')
 
 @section('styles')
     <style>
@@ -61,23 +61,26 @@
             <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#050038] text-center mb-6">Our Services</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
                 <!-- Service Card -->
-                <div class="bg-[#303030] rounded-3xl shadow-md overflow-hidden p-3 md:p-4">
+                <div
+                    class="bg-[#303030] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-3 sm:p-4">
                     <img src="{{ asset('img/kasau/subCompany/house_big.jpg') }}" alt="Ash Stone"
-                        class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl">
-                    <div class="p-4 md:p-6">
+                        class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
                         <h3 class="text-lg md:text-xl font-bold text-white mb-4">Ash Stone / Batu Abu</h3>
                         <p class="text-white mb-2">Kegunaan:</p>
                         <p class="text-[#9EBAFF]">Paving Block, Batako Press</p>
                     </div>
                 </div>
 
-                <!-- Repeat for other services -->
-                <div class="bg-[#303030] rounded-3xl shadow-md overflow-hidden p-3 md:p-4">
-                    <img src="{{ asset('img/kasau/subCompany/house_big-1.jpg') }}" alt="Split Stone"
-                        class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl">
-                    <div class="p-4 md:p-6">
+                <div
+                    class="bg-[#303030] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-3 sm:p-4">
+                    <img src="{{ asset('img/kasau/subCompany/house_big-1.jpg') }}" alt="Ash Stone"
+                        class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
                         <h3 class="text-lg md:text-xl font-bold text-white mb-4">Split Stone / Batu Pecah</h3>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3">
+
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 sm:pt-3">
                             <div>
                                 <p class="text-white mb-2">Kegunaan:</p>
                                 <p class="text-[#9EBAFF]">Material Tambahan Pemberat Pipa Laut</p>
@@ -90,28 +93,30 @@
                     </div>
                 </div>
 
-                <div class="bg-[#303030] rounded-3xl shadow-md overflow-hidden p-3 md:p-4">
-                    <img src="{{ asset('img/kasau/subCompany/house_big-2.jpg') }}" alt="Split Stone"
-                        class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl">
-                    <div class="p-4 md:p-6">
+                <div
+                    class="bg-[#303030] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-3 sm:p-4">
+                    <img src="{{ asset('img/kasau/subCompany/house_big-2.jpg') }}" alt="Ash Stone"
+                        class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
                         <h3 class="text-lg md:text-xl font-bold text-white mb-4">Split Stone / Batu Pecah</h3>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3">
+
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 sm:pt-3">
                             <div>
                                 <p class="text-white mb-2">Kegunaan:</p>
-                                <p class="text-[#9EBAFF] pr-4">Material Struktur Jalan atau Beton</p>
+                                <p class="text-[#9EBAFF]">Material Struktur Jalan atau Beton</p>
                             </div>
                             <div>
                                 <p class="text-white mb-2">Size:</p>
-                                <p class="text-[#9EBAFF]">30-55MM</p>
+                                <p class="text-[#9EBAFF]">10-20MM</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        @include('components.kasau.footer')
-    </div>
+            @include('components.kasau.footer')
+        </div>
 @endsection
 
 @section('scripts')

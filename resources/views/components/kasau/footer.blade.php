@@ -3,7 +3,7 @@
             <div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 py-12">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                     <div>
-                        <h3 class="font-bold text-xl text-yellow-400 mb-2 ">Kasau Group</h3>
+                        <h3 class="font-bold text-3xl text-yellow-400 mb-3 ">Kasau Group</h3>
                         <div class="flex space-x-2 text-white text-lg">
                             <!-- Instagram -->
                             <a href="#" class="hover:text-orange-200 transition-colors">

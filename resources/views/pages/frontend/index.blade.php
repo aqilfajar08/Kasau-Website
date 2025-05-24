@@ -246,17 +246,17 @@
                             <img src="{{ asset('storage/news/' . $news->image) }}" alt="{{ $news->title }}"
                                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                             <span
-                                class="absolute top-3 left-3 bg-white/90 text-xs text-gray-800 font-bold px-4 py-2 rounded-full shadow-sm backdrop-blur">
+                                class="absolute top-3 left-3 bg-[#F3F8FF] text-xs text-[#02033B] font-bold px-4 py-2 rounded-full shadow-sm backdrop-blur">
                                 {{ $news->category->name ?? 'Uncategorized' }}
                             </span>
                         </div>
-                        <div class="px-10 py-6 h-[250px]">
+                        <div class="px-10 py-6 h-[300px]">
                             <h3
-                                class="text-xl font-bold text-gray-900 leading-tight group-hover:text-blue-600 transition-colors">
+                                class="text-xl font-bold text-[#02033B] leading-tight">
                                 {{ $news->title }}
                             </h3>
-                            <p class="mt-3 text-sm text-gray-600 leading-relaxed line-clamp-3">
-                                {{ Str::limit($news->description) }}
+                            <p class="mt-3 text-sm text-[#02033B] leading-relaxed">
+                                {{ Str::limit($news->description, 500) }}
                             </p>
                         </div>
                     </a>

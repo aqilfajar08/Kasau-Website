@@ -69,6 +69,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     // News Category
     Route::resource('/news-category', NewsCategoryController::class);
     Route::resource('/news-category/{category_id}/new', ControllersNewsController::class);
+
 });
 
     Route::get('/kasau-home', [\App\Http\Controllers\kasau\HomeController::class, 'index'])->name('kasau-home');

@@ -42,18 +42,33 @@
                                     <div class="form-group">
                                         <div class="form-group">
                                             <label for="title">Title</label>
-                                            <input type="text" name="title" id="title" required value="{{ $news->title }}"
+                                            <input type="text" name="title" id="title" value="{{ old('title', $news->title) }}"
                                                 class="form-control @error('title') is-invalid @enderror">
+                                                    @error('title')
+                                                        <div class="invalid-feedback">
+                                                            {{ $message }}
+                                                        </div>
+                                                    @enderror
                                         </div>
                                         <div class="form-group  flex flex-col">
                                             <label for="description">Description</label>
-                                            <textarea name="description" id="description"
-                                                class="px-3 py-2 rounded-lg border-2 border-gray-200"
-                                                placeholder="Enter article description">{{ $news->description }}</textarea>
+                                            <textarea name="description" id="description" rows="4"
+                                                class="p-3 rounded-lg border border-gray-200  @error('description') is-invalid @enderror">{{ old('description', $news->description) }}</textarea>
+                                            @error('description')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
                                         </div>
 
                                         <label for="image">Image</label>
-                                        <input type="file" name="image" id="image">
+                                        <input type="file" name="image" id="image" value="{{ old('image') }}" class="@error('image') is-invalid @enderror">
+                                            @error('image')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
+
                                         <!-- button submit -->
                                         <div class="form-group text-right">
                                             <button type="submit" class="btn btn-primary">

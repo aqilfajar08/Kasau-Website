@@ -33,7 +33,7 @@ class NewsController extends Controller
         $request->validate([
             'title' => 'required',
             'image' => 'required',
-            'description' => 'required|max:500',
+            'description' => 'required|max:245',
         ]);
 
         $category = NewsCategory::find($category_id);
@@ -68,7 +68,7 @@ class NewsController extends Controller
         $request->validate([
             'title' => 'required',
             'image' => 'image|mimes:png,jpg,jpeg|max:2048',
-            'description' => 'required',
+            'description' => 'required|max:245',
         ]);
 
         $category = NewsCategory::find($category_id);

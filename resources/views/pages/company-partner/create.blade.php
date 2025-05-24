@@ -41,11 +41,21 @@
                                     <div class="form-group">
                                         <div class="form-group">
                                             <label for="name">Name</label>
-                                            <input type="text" name="name" id="name" required class="form-control @error('name') is-invalid @enderror">
+                                            <input type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}">
+                                            @error('name')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
                                         </div>
                                         
                                         <label for="image">Image</label>
-                                        <input type="file" name="image" id="image">
+                                        <input type="file" name="image" id="image" class="@error('image') is-invalid @enderror" value="{{ old('image') }}">
+                                            @error('image')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
                                         <!-- button submit -->
                                         <div class="form-group text-right">
                                             <button type="submit" class="btn btn-primary">
