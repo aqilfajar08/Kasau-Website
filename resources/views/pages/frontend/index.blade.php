@@ -238,21 +238,33 @@
         <!-- Breaking News Section -->
         <section class="py-16 px-6 max-w-7xl mx-auto">
             <h2 class="text-center text-3xl font-bold mb-6">Breaking News</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 g justify-center">
                 @foreach ($latestNews as $news)
                     <a href="{{ route('kasau-news.show', $news->id) }}"
-                        class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-                        <img src="{{ asset('storage/news/' . $news->image) }}" alt="{{ $news->title }}"
-                            class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <span class="text-sm text-blue-500">{{ $news->category->name ?? 'Uncategorized' }}</span>
-                            <h3 class="text-lg font-semibold mt-2">{{ $news->title }}</h3>
-                            <p class="text-sm text-gray-600 mt-1 line-clamp-3">{{ Str::limit($news->description, 100) }}
+                        class="group block max-w-[300px] mx-auto bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="relative h-52 overflow-hidden rounded-t-2xl">
+                            <img src="{{ asset('storage/news/' . $news->image) }}" alt="{{ $news->title }}"
+                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            <span
+                                class="absolute top-3 left-3 bg-white/90 text-xs text-gray-800 font-bold px-4 py-2 rounded-full shadow-sm backdrop-blur">
+                                {{ $news->category->name ?? 'Uncategorized' }}
+                            </span>
+                        </div>
+                        <div class="px-10 py-6 h-[250px]">
+                            <h3
+                                class="text-xl font-bold text-gray-900 leading-tight group-hover:text-blue-600 transition-colors">
+                                {{ $news->title }}
+                            </h3>
+                            <p class="mt-3 text-sm text-gray-600 leading-relaxed line-clamp-3">
+                                {{ Str::limit($news->description) }}
                             </p>
                         </div>
                     </a>
                 @endforeach
             </div>
+
+
+
 
             <div class="text-center mt-8">
                 <a href="{{ route('kasau-news.index') }}"

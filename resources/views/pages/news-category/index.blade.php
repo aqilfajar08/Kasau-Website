@@ -13,8 +13,7 @@
             <div class="section-header">
                 <h1>New Categories</h1>
                 <div class="section-header-button">
-                    <a href="{{ route('news-category.create') }}"
-                        class="btn btn-primary">Add New</a>
+                    <a href="{{ route('news-category.create') }}" class="btn btn-primary">Add New</a>
                 </div>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
@@ -68,20 +67,21 @@
                                             <td>
                                                 <a href="{{ route('new.index', $category->id) }}">{{ $category->name }}</a>
                                             </td>
-                                            <td class="space-x-3">
-                                                <a href="{{ route('news-category.edit', $category->id) }}"
-                                                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-md transition duration-300">
-                                                    Edit
-                                                </a>
-                                                <form action="{{ route('news-category.destroy', $category->id) }}"
-                                                    method="POST" class="inline-block">
+                                            <td class="flex items-center space-x-3">
+                                                <form class=""
+                                                    action="{{ route('news-category.destroy', $category->id) }}"
+                                                    method="POST" enctype="multipart/form-data" class="d-inline"
+                                                    onsubmit="return confirm('Are you sure want to delete this news?')">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit"
-                                                        class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md transition duration-300"
-                                                        onclick="return confirm('Are you sure you want to delete this category?')">
-                                                        Delete
-                                                    </button>
+                                                    <button type="submit" class="btn btn-danger"><i
+                                                            class="fa fa-trash"></i> Delete</button>
+                                                </form>
+                                                <form action="{{ route('news-category.edit', $category->id) }}"
+                                                    method="GET" class="d-inline">
+                                                    @csrf
+                                                    <button type="submit" class="btn btn-warning"><i
+                                                            class="fa fa-edit"></i> Edit</button>
                                                 </form>
                                             </td>
                                         </tr>

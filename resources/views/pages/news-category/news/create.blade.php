@@ -48,8 +48,14 @@
                                         <div class="form-group  flex flex-col">
                                             <label for="description">Description</label>
                                             <textarea name="description" id="description"
-                                                class="px-3 py-2 rounded-lg border-2 border-gray-200"
-                                                placeholder="Enter article description"></textarea>
+                                                class="px-3 py-2 rounded-lg border-2 border-gray-200 form-control @error('description') is-invalid @enderror"
+                                                placeholder="Enter article description">
+                                        @error('description')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                            </textarea>
                                         </div>
 
                                         <label for="image">Image</label>
