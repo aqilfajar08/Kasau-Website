@@ -1,10 +1,10 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="{{ route('home') }}">Stisla</a>
+            <a href="{{ route('home') }}"><img class="flex justify-center mx-auto" src="{{ asset('img/kasau/logo/logo.svg') }}" alt=""></a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="pages.dashboard">St</a>
+            <a href="pages.dashboard"><img src="{{ asset('img/kasau/logo/logo.svg') }}" alt=""></a>
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>

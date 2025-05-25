@@ -33,6 +33,7 @@ class NewsController extends Controller
         $request->validate([
             'title' => 'required',
             'image' => 'required',
+            'url' => 'url',
             'description' => 'required|max:245',
         ]);
 
@@ -68,13 +69,14 @@ class NewsController extends Controller
         $request->validate([
             'title' => 'required',
             'image' => 'image|mimes:png,jpg,jpeg|max:2048',
+            'url' => 'url',
             'description' => 'required|max:245',
         ]);
 
         $category = NewsCategory::find($category_id);
         $news = News::find($news_id);
 
-        $data = $request->except('image');
+        $data = $request->except('image', 'url');
 
         if ($request->hasFile('image')) {
             $path = public_path('storage/news/' . $news->image);

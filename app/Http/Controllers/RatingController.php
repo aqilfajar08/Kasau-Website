@@ -34,6 +34,6 @@ class RatingController extends Controller
         'review' => $request->review,
     ]);
 
-    return redirect()->route('kasau-home')->with('success', 'Data berhasil ditambahkan');
+    return redirect()->route('kasau-thanks');
     }
 }

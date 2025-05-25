@@ -239,13 +239,14 @@
                 </div>
             </div>
         </li>
-        <li class="dropdown"><a href="#"
+        <li class="dropdown">
+            <a href="#"
                 data-toggle="dropdown"
-                class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                class="nav-link dropdown-toggle nav-link-lg nav-link-user d-flex align-items-center ">
                 <img alt="image"
                     src="{{ asset('img/avatar/avatar-1.png') }}"
-                    class="rounded-circle mr-1">
-                <div class="d-sm-none d-lg-inline-block">Hi, {{ Auth::user()->name }}</div>
+                    class="rounded-circle mr-2">
+                <div class="d-sm-none d-lg-inline-block flex-grow-1">Hi, {{ Auth::user()->name }}</div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-title">Logged in 5 min ago</div>

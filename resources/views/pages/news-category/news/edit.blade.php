@@ -50,10 +50,26 @@
                                                         </div>
                                                     @enderror
                                         </div>
-                                        <div class="form-group  flex flex-col">
+
+                                        <div class="form-group">
+                                            <label for="url">Social Media url</label>
+                                            <input type="text" name="url" id="url" value="{{ old('url', $news->url) }}"
+                                                class="form-control @error('url') is-invalid @enderror">
+                                            @error('url')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
+                                        </div>
+
+                                        <div class="form-group flex flex-col">
                                             <label for="description">Description</label>
-                                            <textarea name="description" id="description" rows="4"
-                                                class="p-3 rounded-lg border border-gray-200  @error('description') is-invalid @enderror">{{ old('description', $news->description) }}</textarea>
+                                            <div class="flex justify-between text-sm mb-1">
+                                                <span>Maximum Character: <span id="char-count" class="text-gray-600">0 / 500</span></span>
+                                            </div>
+                                            <textarea name="description" id="description" rows="4" maxlength="500"
+                                                class="p-3 rounded-lg border border-gray-200 @error('description') is-invalid @enderror"
+                                                placeholder="Tulis deskripsi di sini...">{{ old('description', $news->description) }}</textarea>
                                             @error('description')
                                                 <div class="invalid-feedback">
                                                     {{ $message }}
@@ -98,4 +114,27 @@
 
     <!-- Page Specific JS File -->
     <script src="{{ asset('js/page/forms-advanced-forms.js') }}"></script>
+@endpush
+
+@push('scripts')
+    <script>
+        const textarea = document.getElementById('description');
+        const charCountDisplay = document.getElementById('char-count');
+        const maxChars = 245;
+
+        textarea.addEventListener('input', function() {
+            const charCount = this.value.length;
+            charCountDisplay.textContent = `${charCount} / ${maxChars}`;
+
+            if (charCount >= maxChars) {
+                charCountDisplay.classList.remove('text-gray-600');
+                charCountDisplay.classList.add('text-red-600', 'font-bold');
+            } else {
+                charCountDisplay.classList.remove('text-red-600', 'font-bold');
+                charCountDisplay.classList.add('text-gray-600');
+            }
+        });
+
+        textarea.dispatchEvent(new Event('input'));
+    </script>
 @endpush

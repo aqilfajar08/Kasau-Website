@@ -47,6 +47,6 @@ class FormController extends Controller
             'message' => $request->message,
         ]);
 
-        return redirect()->back()->with('success', 'Formulir berhasil dikirim!');
+        return redirect()->route('kasau-thanksForm');
     }
 }

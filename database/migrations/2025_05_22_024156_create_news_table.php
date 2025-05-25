@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->foreignId('news_category_id')->constrained()->onDelete('cascade');
+            $table->string('url')->nullable();
             $table->string('image');
             $table->text('description');
             $table->timestamps();

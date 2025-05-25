@@ -101,43 +101,26 @@
 @endsection
 
 @section('content')
-    <div class="bg-[#f5efeb] text-gray-800 min-h-screen scroll-smooth">
-        @include('components.kasau.customHeader')
-        <!-- News Section -->
-        <section class="py-16 px-4 sm:px-10 lg:px-20 max-w-7xl mx-auto">
-            <h2 class="text-center text-[#8F0F0E] text-3xl font-bold mb-14 mt-14">All News</h2>
-            <div class="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center">
-                @foreach ($latestNews as $news)
-                    <a href="{{ $news->url }}"
-                        class="group block w-full max-w-xs mx-auto bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out min-h-[450px] flex flex-col">
-                        <div class="relative overflow-hidden h-52 rounded-t-2xl">
-                            <img src="{{ asset('storage/news/' . $news->image) }}" alt="{{ $news->title }}"
-                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-                            <span
-                                class="absolute top-3 left-3 bg-[#F3F8FF]/90 text-xs font-bold px-4 py-2 rounded-full shadow-sm backdrop-blur text-[#02033B] select-none">
-                                {{ $news->category->name ?? 'Uncategorized' }}
-                            </span>
-                        </div>
-                        <div class="flex flex-col px-6 sm:px-8 md:px-10 py-6 flex-grow min-h-[200px] md:min-h-[300px]">
-                            <h3 class="text-lg md:text-xl font-bold text-[#02033B] leading-tight line-clamp-2 pb-3">
-                                {{ $news->title }}
-                            </h3>
-                            <p class="text-sm flex-grow leading-relaxed md:line-clamp-4 line-clamp-none">
-                                {{ $news->description }}
-                            </p>
-                            <div class="mt-4 text-xs text-gray-500 select-none">
-                                {{ $news->created_at->format('F j, Y') }}
-                            </div>
-                        </div>
-                    </a>
-                @endforeach
+    @include('components.kasau.customHeader')
+    <div class="flex items-center justify-center min-h-screen bg-black">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <!-- Colorful Icon Placeholder -->
+                <div class="flex justify-center">
+                    <div class="flex items-center justify-center">
+                        <img src="{{ asset('img/kasau/icon/check.svg') }}" class="w-40 h-40 " alt="">
+                    </div>
+                </div>
+                
+                <!-- Main Text -->
+                <h1 class="text-3xl md:text-5xl font-bold mb-2 text-white">
+                    Thank You
+                </h1>
+                <p class="max-w-md mx-auto text-base md:text-lg text-white">
+                    For give us a feedback! Your input is invaluable to us and helps us improve our services.
+                </p>
             </div>
-            <div class="mt-6">
-                {{ $allNews->links() }}
-            </div>
-        </section>
-
-        @include('components.kasau.footer')
+        </div>
     </div>
 @endsection
 

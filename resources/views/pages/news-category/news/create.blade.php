@@ -50,6 +50,18 @@
                                                 </div>
                                             @enderror
                                         </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="url">Social Media url</label>
+                                            <input type="text" name="url" id="url" value="{{ old('url') }}"
+                                                class="form-control @error('url') is-invalid @enderror">
+                                            @error('url')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
+                                        </div>
+
                                         <div class="form-group flex flex-col">
                                             <label for="description">Description</label>
                                             <div class="flex justify-between text-sm mb-1">
