@@ -135,16 +135,31 @@
                             <div class="table-responsive">
                                 <table class="table-striped table">
                                     <tr>
-                                        <th>No</th>
                                         <th>Title</th>
                                         <th>Image</th>
                                         <th>Description</th>
-                                        <th>Action</th>
                                     </tr>
                                     @foreach ($category->news as $new)
                                         <tr>
-                                            <td>{{ $loop->iteration }}</td>
                                             <td> {{ $new->title }}
+                                                <div class="table-links">
+                                                    <a href="{{ route('new.edit', [$category->id, $new->id]) }}">Edit</a>
+                                                    <div class="bullet"></div>
+                                                    <a href="#" class="text-danger"
+                                                        onclick="event.preventDefault();
+                                                        if (confirm('Are you sure want to delete this news?')) 
+                                                        {
+                                                            document.getElementById('delete-form-{{ $new->id }}').submit();
+                                                        }">
+                                                        Trash
+                                                    </a>
+                                                    <form action="{{ route('new.destroy', [$category->id, $new->id]) }}"
+                                                        method="POST" id="delete-form-{{ $new->id }}"
+                                                        style="display: none;">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                    </form>
+                                                </div>
                                             </td>
                                             <td>
                                                 <div style="width: 100px" class="flex justify-center">
@@ -152,22 +167,8 @@
                                                         class="h-20 w-20 object-cover rounded-lg flex justify-center">
                                                 </div>
                                             </td>
-                                            <td class="px-6 py-4 text-sm text-gray-500 max-w-xs truncate">{{ $new->description}}</td>
-                                            <td class="flex items-center space-x-2 justify-center">
-                                                <form class="" action="{{ route('new.destroy', [$category->id, $new->id]) }}"
-                                                    method="POST" enctype="multipart/form-data" class="d-inline"
-                                                    onsubmit="return confirm('Are you sure want to delete this news?')">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger"><i
-                                                            class="fa fa-trash"></i> Delete</button>
-                                                </form>
-                                                <form action="{{ route('new.edit', [$category->id, $new->id]) }}"
-                                                    method="GET" class="d-inline">
-                                                    @csrf
-                                                    <button type="submit" class="btn btn-warning"><i
-                                                            class="fa fa-edit"></i> Edit</button>
-                                                </form>
+                                            <td class="px-6 py-4 text-sm text-gray-500 max-w-xs truncate">
+                                                {{ $new->description }}
                                             </td>
                                         </tr>
                                     @endforeach

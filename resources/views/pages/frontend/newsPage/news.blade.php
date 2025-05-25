@@ -104,33 +104,34 @@
     <div class="bg-[#f5efeb] text-gray-800 min-h-screen scroll-smooth">
         @include('components.kasau.customHeader')
         <!-- News Section -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-            <h2 class="text-center text-[#8F0F0E] text-3xl font-bold mb-14">All News</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 g justify-center">
+        <section class="py-16 px-4 sm:px-10 lg:px-20 max-w-7xl mx-auto">
+            <h2 class="text-center text-[#8F0F0E] text-3xl font-bold mb-14 mt-14">All News</h2>
+            <div class="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center">
                 @foreach ($latestNews as $news)
                     <a href="{{ route('kasau-news.show', $news->id) }}"
-                        class="group block max-w-[300px] mx-auto bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                        <div class="relative h-52 overflow-hidden rounded-t-2xl">
+                        class="group block w-full max-w-xs mx-auto bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out min-h-[450px] flex flex-col">
+                        <div class="relative overflow-hidden h-52 rounded-t-2xl">
                             <img src="{{ asset('storage/news/' . $news->image) }}" alt="{{ $news->title }}"
-                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                             <span
-                                class="absolute top-3 left-3 bg-[#F3F8FF] text-xs text-[#02033B] font-bold px-4 py-2 rounded-full shadow-sm backdrop-blur">
+                                class="absolute top-3 left-3 bg-[#F3F8FF]/90 text-xs font-bold px-4 py-2 rounded-full shadow-sm backdrop-blur text-[#02033B] select-none">
                                 {{ $news->category->name ?? 'Uncategorized' }}
                             </span>
                         </div>
-                        <div class="px-10 py-6 h-[300px]">
-                            <h3
-                                class="text-xl font-bold text-[#02033B] leading-tight">
+                        <div class="flex flex-col px-6 sm:px-8 md:px-10 py-6 flex-grow min-h-[200px] md:min-h-[300px]">
+                            <h3 class="text-lg md:text-xl font-bold text-[#02033B] leading-tight line-clamp-2 pb-3">
                                 {{ $news->title }}
                             </h3>
-                            <p class="mt-3 text-sm text-[#02033B] leading-relaxed">
-                                {{ Str::limit($news->description, 500) }}
+                            <p class="text-sm flex-grow leading-relaxed md:line-clamp-4 line-clamp-none">
+                                {{ $news->description }}
                             </p>
+                            <div class="mt-4 text-xs text-gray-500 select-none">
+                                {{ $news->created_at->format('F j, Y') }}
+                            </div>
                         </div>
                     </a>
                 @endforeach
             </div>
-
             <div class="mt-6">
                 {{ $allNews->links() }}
             </div>

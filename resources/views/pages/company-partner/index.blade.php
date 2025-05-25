@@ -60,13 +60,15 @@
                                                 <div class="table-links">
                                                     <a href="{{ route('company_partner.edit', $company->id) }}">Edit</a>
                                                     <div class="bullet"></div>
-                                                    <form action="{{ route('company_partner.destroy', $company->id) }}" method="POST" enctype="multipart/form-data"
-                                                        class="d-inline"
-                                                        onsubmit="return confirm('Are you sure want to delete this company?')">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="submit" class="btn btn-danger"><i
-                                                                class="fa fa-trash"></i> Delete</button>
+                                                    <a href="#" class="text-danger"
+                                                        onclick="event.preventDefault();
+                                                        if (confirm('Are you sure want to delete this Company?')) 
+                                                        {
+                                                            document.getElementById('delete-form-{{ $company->id }}').submit();
+                                                        }"
+                                                        >Trash</a>
+                                                        <form action="{{ route('company_partner.destroy', $company->id) }}" method="POST" id="delete-form-{{ $company->id }}" style="display:none;"> 
+                                                            @csrf @method('DELETE')
                                                     </form>
                                                 </div>
                                             </td>

@@ -73,19 +73,18 @@
                                         <tr>
                                             <td> {{ $user->name }}
                                                 <div class="table-links">
-                                                    <a href="#">View</a>
-                                                    <div class="bullet"></div>
                                                     <a href="{{ route('user.edit', $user->id) }}">Edit</a>
                                                     <div class="bullet"></div>
-                                                    <form action="{{ route('user.destroy', $user->id) }}" 
-                                                        method="POST" 
-                                                        class="d-inline" 
-                                                        onsubmit="return confirm('Are you sure want to delete this user?')">
-                                                        @csrf 
-                                                        @method('DELETE')
-                                                                                                                 
-                                                        <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
-                                                    </form>
+                                                    <a href="#" class="text-danger"
+                                                        onclick="event.preventDefault();
+                                                        if (confirm('Are you sure want to delete this User?')) 
+                                                        {
+                                                            document.getElementById('delete-form-{{ $user->id }}').submit();
+                                                        }"
+                                                        >Trash</a>
+                                                        <form action="{{ route('user.destroy', $user->id) }}" method="POST" id="delete-form-{{ $user->id }}" style="display:none;"> 
+                                                            @csrf @method('DELETE')
+                                                        </form>
                                                 </div>
                                             </td>
                                             <td>

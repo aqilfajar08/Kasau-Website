@@ -61,11 +61,12 @@
                                     <tr>
                                         <th>Name</th>
                                         <th>Action</th>
+                                        <th>Detail</th>
                                     </tr>
                                     @foreach ($categories as $category)
                                         <tr>
                                             <td>
-                                                <a href="{{ route('new.index', $category->id) }}">{{ $category->name }}</a>
+                                                {{ $category->name }}
                                             </td>
                                             <td class="flex items-center space-x-3">
                                                 <form class=""
@@ -82,6 +83,14 @@
                                                     @csrf
                                                     <button type="submit" class="btn btn-warning"><i
                                                             class="fa fa-edit"></i> Edit</button>
+                                                </form>
+                                            </td>
+                                            <td class=" items-center">
+                                                <form action="{{ route('new.index', $category->id) }}"
+                                                    method="GET" class="d-inline" >
+                                                    @csrf
+                                                    <button type="submit" class="btn btn-light"><i
+                                                            class="fa fa-archive"></i>Detail</button>
                                                 </form>
                                             </td>
                                         </tr>

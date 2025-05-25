@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
             'email' => 'qilz@gmail.com',
             'position' => 'CEO',
             'department' => 'IT',
-            'password' => Hash::make('12345678'),
+            'password' => Hash::make('123'),
         ]);
 
         $admin->assignRole($role);

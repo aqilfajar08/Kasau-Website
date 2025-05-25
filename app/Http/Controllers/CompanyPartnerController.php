@@ -80,6 +80,7 @@ class CompanyPartnerController extends Controller
         $path = public_path('storage/companies/' . $company->image);
         unlink($path);
         $company->delete();
-        return redirect()->route('company_partner.index');
+
+        return redirect()->route('company_partner.index')->with('success', 'Data berhasil dihapus');
     }
 }
