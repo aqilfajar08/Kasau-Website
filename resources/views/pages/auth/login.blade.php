@@ -30,8 +30,7 @@
                             class="shadow-light rounded-circle mb-5 mt-2">
                         <h4 class="text-dark font-weight-normal">Welcome to <span class="font-weight-bold">Kasau</span>
                         </h4>
-                        <p class="text-muted">Before you get started, you must login or register if you don't already
-                            have an account.</p>
+                        <p class="text-muted">Before you get started, you must already have an account.</p>
                         <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate="">@csrf
                             <div class="form-group">
                                 <label for="email">Email</label>
@@ -62,19 +61,11 @@
                             </div>
 
                             <div class="form-group text-right">
-                                <a href="{{ route('register') }}" class="float-left mt-3">
-                                    Forgot Password?
-                                </a>
                                 <button type="submit" class="btn btn-primary btn-lg btn-icon icon-right"
                                     tabindex="4">
                                     Login
                                 </button>
                             </div>
-
-                            <div class="mt-5 text-center">
-                                Don't have an account? <a href="{{ route('register') }}">Create new one</a>
-                            </div>
-                        </form>
 
                         <div class="text-small mt-5 text-center">
                             Copyright &copy; Your Company. Made with 💙 by Stisla

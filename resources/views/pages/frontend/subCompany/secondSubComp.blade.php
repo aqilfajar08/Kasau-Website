@@ -43,12 +43,12 @@
             <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-center font-bold">
                 Kasau <span class="text-yellow-500">Sinar</span> Sejahtera <span class="text-yellow-500">Abadi</span>
             </h1>
-            <p class="mt-4 text-gray-700 text-center text-sm sm:text-base md:text-xl lg:text-2xl max-w-6xl">
+            <p class="mt-10 text-gray-700 text-base sm:text-base md:text-xl lg:text-2xl px-4 sm:px-8 md:px-16 lg:px-20 max-w-6xl">
                 Kasau Sinar Sejahtera Abadi adalah salah satu anak perusahaan dari Kasau Group yang bergerak di bidang jasa
                 pengadaan material logistik. Dengan memiliki armada sendiri, kami dapat menawarkan harga yang lebih
                 kompetitif, serta memastikan distribusi yang efisien dan tepat waktu.
             </p>
-            <p class="mt-4 text-gray-700 text-center text-sm sm:text-base md:text-xl lg:text-2xl max-w-6xl">
+            <p class="mt-5 text-gray-700 text-base sm:text-base md:text-xl lg:text-2xl px-4 sm:px-8 md:px-16 lg:px-20 max-w-6xl">
                 Dengan kapasitas produksi lebih dari 30 ribu ton material dan stockpile berkapasitas lebih dari 50 ribu ton,
                 kami mampu menekan biaya operasional dan menjaga stabilitas harga, terutama di wilayah Balikpapan.
                 Perusahaan kami berkomitmen untuk terus memperluas wilayah operasional guna menjadi pusat industri bisnis

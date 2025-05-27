@@ -40,16 +40,16 @@
         @include('components.kasau.customHeader')
 
         <section class="relative w-full min-h-screen flex items-center justify-center flex-col px-4 lg:px-20 py-12 lg:py-24">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-center font-bold leading-tight">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-8xl text-center font-bold leading-tight">
                 Kasau <span class="text-yellow-500">Sinar</span> Samudera
             </h1>
             <p
-                class="mt-4 text-gray-700 text-center text-sm sm:text-base md:text-xl lg:text-2xl px-4 sm:px-8 md:px-16 lg:px-32 max-w-6xl">
+                class="mt-10 text-gray-700 text-base sm:text-base md:text-xl lg:text-2xl px-4 sm:px-8 md:px-16 lg:px-20 max-w-6xl">
                 Kasau Sinar Samudera adalah salah satu anak perusahaan yang bernaung dalam Kasau Group, bergerak di bidang
                 jasa angkutan laut dan agen pelayaran. Berdiri sejak tahun 1999 di Balikpapan,
             </p>
             <p
-                class="mt-4 text-gray-700 text-center text-sm sm:text-base md:text-xl lg:text-2xl px-4 sm:px-8 md:px-16 lg:px-32 max-w-6xl">
+                class="mt-5 text-gray-700 text-base sm:text-base md:text-xl lg:text-2xl px-4 sm:px-8 md:px-16 lg:px-20 max-w-6xl">
                 perusahaan ini menyediakan layanan penyewaan kapal untuk transportasi material seperti pasir, batu, dan
                 bahan lainnya melalui sistem transshipment, serta pengiriman via sungai dan pesisir pantai dari pelabuhan
                 muat ke pelabuhan bongkar.

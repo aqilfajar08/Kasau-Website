@@ -43,15 +43,15 @@
         <!-- Hero Section -->
         <section class="relative w-full min-h-screen flex items-center justify-center py-12 md:py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h1 class="text-4xl md:text-5xl lg:text-7xl text-center font-bold">
+                <h1 class="text-4xl md:text-5xl lg:text-8xl text-center font-bold">
                     Kasau <span class="text-yellow-500">Sinar</span> Multi <span class="text-yellow-500">Jasa</span>
                 </h1>
-                <p class="mt-4 text-gray-700 text-center text-base sm:text-lg md:text-xl lg:text-2xl">
+                <p class="mt-10 text-gray-700 text-base sm:text-base md:text-xl lg:text-2xl px-4 sm:px-8 md:px-16 lg:px-20 max-w-6xl">
                     Kasau Sinar Multi Jasa adalah perusahaan yang bergerak di bidang jasa bongkar muat material, baik di
                     darat maupun melalui sistem Ship to Ship (STS). Kami hadir sebagai solusi bagi industri yang membutuhkan
                     layanan logistik yang efisien, aman, dan terpercaya.
                 </p>
-                <p class="mt-4 text-gray-700 text-center text-base sm:text-lg md:text-xl lg:text-2xl">
+                <p class="mt-5 text-gray-700 text-base sm:text-base md:text-xl lg:text-2xl px-4 sm:px-8 md:px-16 lg:px-20 max-w-6xl">
                     Sebagai bagian dari Kasau Group, kami memiliki pengalaman bertahun-tahun dalam industri logistik dan
                     distribusi material. Dengan armada yang memadai serta tim profesional, kami memastikan bahwa setiap
                     proses bongkar muat berjalan tepat waktu, terkoordinasi, dan sesuai standar keselamatan kerja.

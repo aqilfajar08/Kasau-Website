@@ -42,29 +42,18 @@
         @include('components.kasau.customHeader')
 
         <!-- Hero Section -->
-        <section class="relative w-full min-h-screen flex items-center justify-center">
-            <div class="container mx-auto px-4 flex justify-center">
-                <!-- Mobile Title -->
-                <div class="md:hidden text-center">
-                    <h1 class="text-4xl font-bold text-yellow-500 mb-4 fade-in">About Kasau Group</h1>
-                    <p class="text-xl text-gray-700 slide-up">Leading Shipping Service Company</p>
-                </div>
-
-                <!-- Desktop Image Container -->
-                <div class="hidden md:block m-auto">
-                    <img class="w-full max-w-7xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 
-                       h-auto object-contain fade-in"
-                        src="{{ asset('img/kasau/about/bismillah.png') }}" alt="Ship Crew">
-
-                        <div
-                        class="absolute m-auto 
-                        top-32 sm:top-36 md:top-40 lg:top-52 xl:top-64 
-                        left-0 w-full h-full flex items-center justify-center">
-                        <a href="#startSec">
-                            <img src="{{ asset('img/kasau/about/arrow.svg') }}" alt="Arrow"
-                            class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32">
-                        </a>
-                        </div>
+        <section id="home" class="scroll-mt-28 relative min-h-screen bg-cover bg-fixed bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('{{ asset('img/kasau/about/DSC_4962.jpg') }}');">
+            <div class="flex items-center justify-center min-h-screen">
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="space-y-6 flex flex-col items-center justify-center text-center">
+                        <h1 class="text-4xl sm:text-5xl lg:text-8xl font-bold text-white text-center">
+                            Kasau Group
+                        </h1>
+                        <h2 class="mt-4 text-4xl md:text-6xl text-white text-center">
+                            History
+                        </h2>
+                    </div>
                 </div>
             </div>
         </section>

@@ -14,10 +14,9 @@
     <link rel="icon" href="{{ asset('img/kasau/logo/logo.svg') }}" class="scale-150" type="image/x-icon">
 
     <!-- Scripts and Styles -->
-    @vite([
-        'resources/css/app.css',
-        'resources/js/app.js'
-    ])
+    {{-- Dengan ini --}}
+    <link rel="stylesheet" href="{{ asset('build/assets/app-3634cf44.css') }}">
+    <script src="{{ asset('build/assets/app-a89463d6.js') }}" defer></script>
 </head>
 <body class="font-sans antialiased">
     <div class="min-h-screen">

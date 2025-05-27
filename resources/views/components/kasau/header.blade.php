@@ -132,10 +132,10 @@
                                 class="text-white hover:text-orange-400 transition-colors text-sm font-medium
                                   relative after:absolute after:bottom-0 after:left-0 after:w-0 
                                   after:h-0.5 after:bg-orange-400 after:transition-all hover:after:w-full">
-                                <a href="https://backend-kasau.test/kasau-partner">Partner</a>
+                                <a href="{{ route('kasau-partner') }}">Partner</a>
                             </li>
                         </ul>
-                        <a href="https://backend-kasau.test/kasau-form">
+                        <a href="{{ route('kasau-form') }}">
                             <button
                                 class="bg-gradient-to-r from-orange-400 to-orange-500 text-white 
                                          px-6 py-2 rounded-full font-medium hover:shadow-lg 

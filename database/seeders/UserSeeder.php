@@ -15,17 +15,17 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        $role = Role::create(['name' => 'admin']);
+        $adminRole = Role::findOrCreate('admin', 'web');
 
-        $admin = User::factory()->create([
-            'name' => 'aqil',
+        $user = User::create([
+            'name' => 'ratna',
             'role' => 'admin',
-            'email' => 'qilz@gmail.com',
-            'position' => 'CEO',
+            'email' => 'ratna@gmail.com',
+            'position' => 'Admin Control',
             'department' => 'IT',
-            'password' => Hash::make('123'),
+            'password' => Hash::make('r4tna#123'),
         ]);
 
-        $admin->assignRole($role);
+        $user->assignRole($adminRole);
     }
 }

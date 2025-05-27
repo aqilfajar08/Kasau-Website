@@ -85,7 +85,7 @@
                 <div class="flex items-center justify-between">
 
                     <!-- Logo -->
-                    <a href="https://backend-kasau.test/kasau-home" class="cursor-pointer">
+                    <a href="{{ route('kasau-home') }}" class="cursor-pointer">
                         <img src="{{ asset('img/kasau/logo/logo.svg') }}" alt="Logo"
                             class="scale-150 h-8 md:h-10 transition-all">
                     </a>

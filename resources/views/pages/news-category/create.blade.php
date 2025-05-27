@@ -64,7 +64,7 @@
 
 @extends('layouts.app')
 
-@section('title', 'Create News')
+@section('title', 'Create Social Media Category')
 
 @push('style')
     <!-- CSS Libraries -->
@@ -80,16 +80,16 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Create News</h1>
+                <h1>Create Social Media Category</h1>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
                     <div class="breadcrumb-item"><a href="#">Forms</a></div>
-                    <div class="breadcrumb-item">Create News</div>
+                    <div class="breadcrumb-item">Create Social Media Category</div>
                 </div>
             </div>
 
             <div class="section-body">
-                <h2 class="section-title">Create News</h2>
+                <h2 class="section-title">Create Social Media Category</h2>
                 <p class="section-lead">We provide advanced input fields, such as date picker, color picker, and so on.</p>
 
                 <div class="row">
