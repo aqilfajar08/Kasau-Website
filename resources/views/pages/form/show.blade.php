@@ -82,13 +82,6 @@
                                 <table class="table-striped table">
                                 <div>
                                     <tr>
-                                        <th>Account Name</th>
-                                    </tr>
-                                    <tr>
-                                        <td>{{ $form->user->name }}</td>
-                                    </tr>
-
-                                    <tr>
                                         <th>Full Name</th>
                                     </tr>
                                     <tr>

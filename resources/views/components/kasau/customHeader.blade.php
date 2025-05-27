@@ -135,7 +135,7 @@
                                 <a href="https://backend-kasau.test/kasau-partner">Partner</a>
                             </li>
                         </ul>
-                        <a href="https://backend-kasau.test/kasau-form">
+                        <a href="{{ route('kasau-form') }}">
                             <button
                                 class="bg-gradient-to-r from-orange-400 to-orange-500 text-white 
                                          px-6 py-2 rounded-full font-medium hover:shadow-lg 

@@ -38,7 +38,6 @@ class FormController extends Controller
         ]);
 
         Form::create([
-            'user_id' => Auth::user()->id,
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'email' => $request->email,

@@ -29,7 +29,6 @@ class RatingController extends Controller
     ]);
 
     Rating::create([
-        'user_id' => Auth::user()->id,
         'rating' => $request->rating,
         'review' => $request->review,
     ]);

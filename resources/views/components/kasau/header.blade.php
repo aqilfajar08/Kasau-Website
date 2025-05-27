@@ -202,7 +202,7 @@
                             </li>
 
                             <li>
-                                <a href="https://backend-kasau.test/kasau-partner" @click="mobileMenuOpen = false"
+                                <a href="{{ route('kasau-partner') }}" @click="mobileMenuOpen = false"
                                     class="block py-3 px-4 text-white hover:bg-white/10 rounded-lg 
                                    transition-all duration-200 relative overflow-hidden group">
                                     <span class="relative z-10 flex items-center justify-between">
@@ -218,13 +218,15 @@
 
                             <!-- Mobile Contact Button -->
                             <div class="pt-4 pb-2">
-                                <button
-                                    class="w-full bg-gradient-to-r from-orange-400 to-orange-500 
-                                     text-white px-6 py-3 rounded-lg font-medium 
-                                     hover:shadow-lg hover:shadow-orange-500/25
-                                     active:scale-95 transform transition-all duration-200">
-                                    Contact Us
-                                </button>
+                                <a href="{{ route('kasau-form') }}">
+                                    <button
+                                        class="w-full bg-gradient-to-r from-orange-400 to-orange-500 
+                                         text-white px-6 py-3 rounded-lg font-medium 
+                                         hover:shadow-lg hover:shadow-orange-500/25
+                                         active:scale-95 transform transition-all duration-200">
+                                        Contact Us
+                                    </button>
+                                </a>
                             </div>
                     </div>
                 </nav>
