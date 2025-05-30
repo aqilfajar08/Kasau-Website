@@ -47,7 +47,7 @@
                 <ul class="dropdown-menu">
                     <li class='{{ Request::is('dashboard-general-dashboard') ? 'active' : '' }}'>
                         <a class="nav-link"
-                            href="{{ route('form') }}">Forms Data</a>
+                            href="{{ route('form.index') }}">Forms Data</a>
                     </li>
                 </ul>
             </li>

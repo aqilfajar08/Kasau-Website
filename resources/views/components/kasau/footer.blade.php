@@ -39,18 +39,18 @@
                     <div>
                         <h4 class="font-semibold mb-2">Home</h4>
                         <ul class="space-y-3 text-gray-500">
-                            <li class="hover:text-white duration-300"><a href="https://backend-kasau.test/kasau-home">Home</a></li>
-                            <li class="hover:text-white duration-300"><a href="https://backend-kasau.test/kasau-about">About</a></li>
-                            <li class="hover:text-white duration-300"><a href="https://backend-kasau.test/kasau-partner">Partner</a></li>
-                            <li class="hover:text-white duration-300"><a href="">All News</a></li>
+                            <li class="hover:text-white duration-300"><a href="{{ route('kasau-home') }}">Home</a></li>
+                            <li class="hover:text-white duration-300"><a href="{{ route('kasau-about') }}">About</a></li>
+                            <li class="hover:text-white duration-300"><a href="{{ route('kasau-partner') }}">Partner</a></li>
+                            <li class="hover:text-white duration-300"><a href="{{ route('kasau-news.index') }}">All News</a></li>
                         </ul>
                     </div>
                     <div>
-                        <h4 class="font-semibold mb-2">SubCompany</h4>
+                        <h4 class="font-semibold mb-2">Company</h4>
                         <ul class="space-y-3 text-gray-500">
-                            <li class="hover:text-white duration-300"><a href="https://backend-kasau.test/kasau-sinar-multi-jasa">Kasau Sinar Multi Jasa</a></li>
-                            <li class="hover:text-white duration-300"><a href="https://backend-kasau.test/kasau-sinar-sejahtera-abadi">Kasau Sinar Sejahtera Abadi</a></li>
-                            <li class="hover:text-white duration-300"><a href="https://backend-kasau.test/kasau-sinar-samudera">Kasau Sinar Samudera</a></li>
+                            <li class="hover:text-white duration-300"><a href="{{ route('kasau-sinar-multi-jasa') }}">Kasau Sinar Multi Jasa</a></li>
+                            <li class="hover:text-white duration-300"><a href="{{ route('kasau-sinar-sejahtera-abadi') }}">Kasau Sinar Sejahtera Abadi</a></li>
+                            <li class="hover:text-white duration-300"><a href="{{ route('kasau-sinar-samudera') }}">Kasau Sinar Samudera</a></li>
                         </ul>
                     </div>
                     <div class="bg-black border-2 border-white rounded-xl text-white p-4 text-xs"

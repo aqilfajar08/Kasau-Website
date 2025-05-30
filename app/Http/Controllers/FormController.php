@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Form;
 use App\Models\Rating;
+use App\Models\User;
+use App\Notifications\FormSubmitted;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -22,7 +24,7 @@ class FormController extends Controller
     {
         $form = Form::find($form_id);
         return view('pages.form.show', compact('form'));
-    }
+    }   
 
     public function store(Request $request)
     {
@@ -37,7 +39,7 @@ class FormController extends Controller
             'message' => 'required',
         ]);
 
-        Form::create([
+        $form = Form::create([
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'email' => $request->email,
@@ -46,6 +48,26 @@ class FormController extends Controller
             'message' => $request->message,
         ]);
 
+        $admins = User::role('admin')->get();
+        foreach ($admins as $admin) {
+            $admin->notify(new FormSubmitted($form));
+        }
+
+    return redirect()->route('kasau-thanks')->with('success', 'Form berhasil dikirim.');
+
         return redirect()->route('kasau-thanksForm');
+    }
+
+    public function delete($form_id)
+    {
+        $form = Form::find($form_id);
+        return view('pages.form.index', compact('form'));
+    }
+
+    public function destroy(Form $form)
+    {
+        $form->delete();
+
+        return redirect()->route('form.index')->with('success', 'Data berhasil dihapus');
     }
 }

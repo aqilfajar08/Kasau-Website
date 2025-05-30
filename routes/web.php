@@ -1,9 +1,12 @@
 <?php
 
 use App\Http\Controllers\CompanyPartnerController;
+use App\Http\Controllers\FormController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\NewsCategoryController;
 use App\Http\Controllers\NewsController as ControllersNewsController;
+use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\RatingController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -18,14 +21,24 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::resource('/user', UserController::class);
     Route::resource('/company_partner', CompanyPartnerController::class);
-    Route::get('/rating', [\App\Http\Controllers\RatingController::class, 'index'])->name('rating');
-    Route::get('/form', [\App\Http\Controllers\FormController::class, 'index'])->name('form');
-    Route::get('/form/{id}', [\App\Http\Controllers\FormController::class, 'show'])->name('form.show');
 
+    // Rating Controller 
+    Route::get('/rating', [\App\Http\Controllers\RatingController::class, 'index'])->name('rating');
+    Route::delete('/rating/{rating}', [RatingController::class, 'destroy'])->name('rating.destroy');
+    // end of Rating Controller 
+    
+    // Form Controller
+    Route::resource('/form', FormController::class);
+    Route::delete('/form/{form}', [FormController::class, 'destroy'])->name('form.destroy');
+    // end of Form Controller
+    
     // News Category
     Route::resource('/news-category', NewsCategoryController::class);
     Route::resource('/news-category/{category_id}/new', ControllersNewsController::class);
+    // end of News Category
 
+
+    Route::get('/notifications/{id}/redirect', [NotificationController::class, 'handleNotification'])->name('notifications.handle');
 });
 
 // kasau route

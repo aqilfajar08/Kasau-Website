@@ -109,7 +109,7 @@
             <div class="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center">
                 @foreach ($latestNews as $news)
                     <a href="{{ $news->url }}"
-                        class="group block w-full max-w-xs mx-auto bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out min-h-[450px] flex flex-col">
+                        class="group w-full max-w-xs mx-auto bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out min-h-[450px] flex flex-col">
                         <div class="relative overflow-hidden h-52 rounded-t-2xl">
                             <img src="{{ asset('storage/news/' . $news->image) }}" alt="{{ $news->title }}"
                                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
@@ -119,10 +119,10 @@
                             </span>
                         </div>
                         <div class="flex flex-col px-6 sm:px-8 md:px-10 py-6 flex-grow min-h-[200px] md:min-h-[300px]">
-                            <h3 class="text-lg md:text-xl font-bold text-[#02033B] leading-tight line-clamp-2 pb-3">
+                            <h3 class="text-lg md:text-xl font-bold text-[#02033B] leading-tight pb-3">
                                 {{ $news->title }}
                             </h3>
-                            <p class="text-sm flex-grow leading-relaxed md:line-clamp-4 line-clamp-none">
+                            <p class="text-sm flex-grow leading-relaxed">
                                 {{ $news->description }}
                             </p>
                             <div class="mt-4 text-xs text-gray-500 select-none">

@@ -218,7 +218,7 @@
 
                             <!-- Mobile Contact Button -->
                             <div class="pt-4 pb-2">
-                                <a href="https://backend-kasau.test/kasau-partner">
+                                <a href="{{ route('kasau-form') }}">
                                     <button
                                         class="w-full bg-gradient-to-r from-orange-400 to-orange-500 
                                          text-white px-6 py-3 rounded-lg font-medium 

@@ -64,6 +64,7 @@
                                         <th>Feedback</th>
                                         <th>Rating Star</th>
                                         <th>Date</th>
+                                        <th>Action</th>
                                     </tr>
                                     @foreach ($ratings as $rating)
                                         <tr>
@@ -75,6 +76,19 @@
                                                 @endfor
                                             </td>
                                             <td>{{ $rating->created_at->format('d M Y') }}</td>
+                                            <td>
+                                                <a href="#" class="text-danger"
+                                                    onclick="event.preventDefault(); 
+                                                    if (confirm('Are you sure want to delete this Feedback?')) {
+                                                        document.getElementById('delete-form-{{ $rating->id }}').submit();
+                                                    }">Trash</a>
+                                                <form id="delete-form-{{ $rating->id }}"
+                                                    action="{{ route('rating.destroy', $rating->id) }}" method="POST"
+                                                    style="display: none;">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                </form>
+                                            </td>
                                         </tr>
                                     @endforeach
                                 </table>

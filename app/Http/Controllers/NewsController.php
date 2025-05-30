@@ -29,7 +29,7 @@ class NewsController extends Controller
     }
 
     public function store(Request $request, $category_id)
-    {
+    {        
         $request->validate([
             'title' => 'required',
             'image' => 'required',

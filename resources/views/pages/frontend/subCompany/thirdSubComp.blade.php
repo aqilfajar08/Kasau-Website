@@ -40,19 +40,19 @@
         @include('components.kasau.customHeader')
 
         <section class="relative w-full min-h-screen flex items-center justify-center flex-col px-4 lg:px-20 py-12 lg:py-24">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-8xl text-center font-bold leading-tight">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-8xl text-center font-inter font-bold leading-tight">
                 Kasau <span class="text-yellow-500">Sinar</span> Samudera
             </h1>
             <p
-                class="mt-10 text-gray-700 text-base sm:text-base md:text-xl lg:text-2xl px-4 sm:px-8 md:px-16 lg:px-20 max-w-6xl">
-                Kasau Sinar Samudera adalah salah satu anak perusahaan yang bernaung dalam Kasau Group, bergerak di bidang
-                jasa angkutan laut dan agen pelayaran. Berdiri sejak tahun 1999 di Balikpapan,
+                class="mt-10 text-gray-700 font-inter text-base sm:text-base md:text-xl lg:text-2xl px-4 sm:px-8 md:px-16 lg:px-20 max-w-6xl">
+                Kasau Sinar Samudera (KSS) adalah bagian dari Kasau Group yang bergerak di bidang jasa angkutan laut dan
+                agen pelayaran. Berdiri sejak tahun 2008 di Balikpapan, KSS melayani kebutuhan logistik laut secara profesional
             </p>
             <p
-                class="mt-5 text-gray-700 text-base sm:text-base md:text-xl lg:text-2xl px-4 sm:px-8 md:px-16 lg:px-20 max-w-6xl">
-                perusahaan ini menyediakan layanan penyewaan kapal untuk transportasi material seperti pasir, batu, dan
-                bahan lainnya melalui sistem transshipment, serta pengiriman via sungai dan pesisir pantai dari pelabuhan
-                muat ke pelabuhan bongkar.
+                class="mt-5 text-gray-700 font-inter text-base sm:text-base md:text-xl lg:text-2xl px-4 sm:px-8 md:px-16 lg:px-20 max-w-6xl">
+                KSS menyediakan layanan penyewaan kapal untuk pengangkutan material seperti pasir, batu, dan lainnya melalui
+                sistem transshipment, termasuk pengiriman via sungai dan pesisir. KSS juga mendukung operasional PERTAMINA
+                Hulu Mahakam.
             </p>
         </section>
 
@@ -66,15 +66,15 @@
                     <img src="{{ asset('img/kasau/subCompany/fadlun.jpg') }}" alt="Ash Stone"
                         class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
                     <div class="p-4 sm:p-6">
-                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4">TB. Fadlun 99-01</h3>
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white font-inter mb-3 sm:mb-4">TB. Fadlun 99-01</h3>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 sm:pt-3">
                             <div>
-                                <p class="text-white text-sm sm:text-base mb-2">Long Towing</p>
-                                <p class="text-[#DFAC37] font-semibold">TugBoat</p>
+                                <p class="text-white font-inter text-sm sm:text-base mb-2">Long Towing</p>
+                                <p class="text-[#DFAC37] font-inter font-semibold">TugBoat</p>
                             </div>
                             <div>
-                                <p class="text-white text-sm sm:text-base mb-2">Net Tonnage</p>
-                                <p class="text-[#DFAC37] font-semibold">36 NT</p>
+                                <p class="text-white font-inter text-sm sm:text-base mb-2">Net Tonnage</p>
+                                <p class="text-[#DFAC37] font-inter font-semibold">36 NT</p>
                             </div>
                         </div>
                     </div>
@@ -86,15 +86,15 @@
                     <img src="{{ asset('img/kasau/subCompany/Linear.png') }}" alt="Split Stone"
                         class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
                     <div class="p-4 sm:p-6">
-                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4">TB. Fadlun 99-07</h3>
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white font-inter mb-3 sm:mb-4">TB. Fadlun 99-07</h3>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 sm:pt-3">
                             <div>
-                                <p class="text-white text-sm sm:text-base mb-2">Long Towing</p>
-                                <p class="text-[#DFAC37] font-semibold">TugBoat</p>
+                                <p class="text-white font-inter text-sm sm:text-base mb-2">Long Towing</p>
+                                <p class="text-[#DFAC37] font-inter font-semibold">TugBoat</p>
                             </div>
                             <div>
-                                <p class="text-white text-sm sm:text-base mb-2">Net Tonnage</p>
-                                <p class="text-[#DFAC37] font-semibold">48 NT</p>
+                                <p class="text-white font-inter text-sm sm:text-base mb-2">Net Tonnage</p>
+                                <p class="text-[#DFAC37] font-inter font-semibold">48 NT</p>
                             </div>
                         </div>
                     </div>
@@ -105,15 +105,15 @@
                     <img src="{{ asset('img/kasau/subCompany/fadlun-99.jpg') }}" alt="Split Stone"
                         class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
                     <div class="p-4 sm:p-6">
-                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4">TB. Fadlun 99-09</h3>
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white font-inter mb-3 sm:mb-4">TB. Fadlun 99-09</h3>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 sm:pt-3">
                             <div>
-                                <p class="text-white text-sm sm:text-base mb-2">Supporting Rig</p>
-                                <p class="text-[#DFAC37] font-semibold">TugBoat</p>
+                                <p class="text-white font-inter text-sm sm:text-base mb-2">Supporting Rig</p>
+                                <p class="text-[#DFAC37] font-inter font-semibold">TugBoat</p>
                             </div>
                             <div>
-                                <p class="text-white text-sm sm:text-base mb-2">Net Tonnage</p>
-                                <p class="text-[#DFAC37] font-semibold">43 NT</p>
+                                <p class="text-white font-inter text-sm sm:text-base mb-2">Net Tonnage</p>
+                                <p class="text-[#DFAC37] font-inter font-semibold">43 NT</p>
                             </div>
                         </div>
                     </div>
@@ -124,15 +124,15 @@
                     <img src="{{ asset('img/kasau/subCompany/gambar.jpg') }}" alt="Split Stone"
                         class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
                     <div class="p-4 sm:p-6">
-                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4">BG. Baiduri-B</h3>
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white font-inter mb-3 sm:mb-4">BG. Baiduri-B</h3>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 sm:pt-3">
                             <div>
-                                <p class="text-white text-sm sm:text-base mb-2">Barge</p>
-                                <p class="text-[#DFAC37] font-semibold">180FT Jumbo</p>
+                                <p class="text-white font-inter text-sm sm:text-base mb-2">Barge</p>
+                                <p class="text-[#DFAC37] font-inter font-semibold">180FT Jumbo</p>
                             </div>
                             <div>
-                                <p class="text-white text-sm sm:text-base mb-2">Net Tonnage</p>
-                                <p class="text-[#DFAC37] font-semibold">267 Ton</p>
+                                <p class="text-white font-inter text-sm sm:text-base mb-2">Net Tonnage</p>
+                                <p class="text-[#DFAC37] font-inter font-semibold">267 Ton</p>
                             </div>
                         </div>
                     </div>
@@ -143,15 +143,15 @@
                     <img src="{{ asset('img/kasau/subCompany/gambar-3.jpg') }}" alt="Split Stone"
                         class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
                     <div class="p-4 sm:p-6">
-                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4">BG. Fadlun 99-03</h3>
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white font-inter mb-3 sm:mb-4">BG. Fadlun 99-03</h3>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 sm:pt-3">
                             <div>
-                                <p class="text-white text-sm sm:text-base mb-2">Barge</p>
-                                <p class="text-[#DFAC37] font-semibold">180FT Jumbo</p>
+                                <p class="text-white font-inter text-sm sm:text-base mb-2">Barge</p>
+                                <p class="text-[#DFAC37] font-inter font-semibold">180FT Jumbo</p>
                             </div>
                             <div>
-                                <p class="text-white text-sm sm:text-base mb-2">Net Tonnage</p>
-                                <p class="text-[#DFAC37] font-semibold">226 Ton</p>
+                                <p class="text-white font-inter text-sm sm:text-base mb-2">Net Tonnage</p>
+                                <p class="text-[#DFAC37] font-inter font-semibold">226 Ton</p>
                             </div>
                         </div>
                     </div>
@@ -162,34 +162,34 @@
                     <img src="{{ asset('img/kasau/subCompany/gambar-2.jpg') }}" alt="Split Stone"
                         class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
                     <div class="p-4 sm:p-6">
-                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4">BG. Fadlun 99-08</h3>
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white font-inter mb-3 sm:mb-4">BG. Fadlun 99-08</h3>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 sm:pt-3">
                             <div>
-                                <p class="text-white text-sm sm:text-base mb-2">Barge</p>
-                                <p class="text-[#DFAC37] font-semibold">230 FT</p>
+                                <p class="text-white font-inter text-sm sm:text-base mb-2">Barge</p>
+                                <p class="text-[#DFAC37] font-inter font-semibold">230 FT</p>
                             </div>
                             <div>
-                                <p class="text-white text-sm sm:text-base mb-2">Net Tonnage</p>
-                                <p class="text-[#DFAC37] font-semibold">405 Ton</p>
+                                <p class="text-white font-inter text-sm sm:text-base mb-2">Net Tonnage</p>
+                                <p class="text-[#DFAC37] font-inter font-semibold">405 Ton</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div
                     class="bg-[#303030] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-3 sm:p-4">
                     <img src="{{ asset('img/kasau/subCompany/gambar-1.jpg') }}" alt="Split Stone"
                         class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
                     <div class="p-4 sm:p-6">
-                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4">BG. RVR-2</h3>
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white font-inter mb-3 sm:mb-4">BG. RVR-2</h3>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 sm:pt-3">
                             <div>
-                                <p class="text-white text-sm sm:text-base mb-2">Barge</p>
-                                <p class="text-[#DFAC37] font-semibold">240 FT Jumbo</p>
+                                <p class="text-white font-inter text-sm sm:text-base mb-2">Barge</p>
+                                <p class="text-[#DFAC37] font-inter font-semibold">240 FT Jumbo</p>
                             </div>
                             <div>
-                                <p class="text-white text-sm sm:text-base mb-2">Net Tonnage</p>
-                                <p class="text-[#DFAC37] font-semibold">567 Ton</p>
+                                <p class="text-white font-inter text-sm sm:text-base mb-2">Net Tonnage</p>
+                                <p class="text-[#DFAC37] font-inter font-semibold">567 Ton</p>
                             </div>
                         </div>
                     </div>

@@ -22,6 +22,9 @@ module.exports = {
         'screen-1/2': '50vh',
         'screen-1/3': '33.333333vh',
         'screen-2/3': '66.666667vh',
+      },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
       }
     },
   },

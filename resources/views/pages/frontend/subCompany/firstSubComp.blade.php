@@ -43,40 +43,34 @@
         <!-- Hero Section -->
         <section class="relative w-full min-h-screen flex items-center justify-center py-12 md:py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h1 class="text-4xl md:text-5xl lg:text-8xl text-center font-bold">
+                <h1 class="text-4xl md:text-5xl lg:text-8xl text-center font-bold font-inter">
                     Kasau <span class="text-yellow-500">Sinar</span> Multi <span class="text-yellow-500">Jasa</span>
                 </h1>
-                <p class="mt-10 text-gray-700 text-base sm:text-base md:text-xl lg:text-2xl px-4 sm:px-8 md:px-16 lg:px-20 max-w-6xl">
-                    Kasau Sinar Multi Jasa adalah perusahaan yang bergerak di bidang jasa bongkar muat material, baik di
-                    darat maupun melalui sistem Ship to Ship (STS). Kami hadir sebagai solusi bagi industri yang membutuhkan
-                    layanan logistik yang efisien, aman, dan terpercaya.
+                <p
+                    class="mt-10 text-gray-700 text-base font-inter sm:text-base md:text-xl lg:text-2xl px-4 sm:px-8 md:px-16 lg:px-20 max-w-6xl">
+                    PT. KSMJ (Kasau Sinar Multi Jasa) merupakan perusahaan yang berfokus pada jasa bongkar muat material dan
+                    pengelolaan alat berat (heavy equipment). Meski saat ini belum aktif beroperasi.
                 </p>
-                <p class="mt-5 text-gray-700 text-base sm:text-base md:text-xl lg:text-2xl px-4 sm:px-8 md:px-16 lg:px-20 max-w-6xl">
-                    Sebagai bagian dari Kasau Group, kami memiliki pengalaman bertahun-tahun dalam industri logistik dan
-                    distribusi material. Dengan armada yang memadai serta tim profesional, kami memastikan bahwa setiap
-                    proses bongkar muat berjalan tepat waktu, terkoordinasi, dan sesuai standar keselamatan kerja.
+                <p
+                    class="mt-5 text-gray-700 text-base font-inter sm:text-base md:text-xl lg:text-2xl px-4 sm:px-8 md:px-16 lg:px-20 max-w-6xl">
+                    PT. KSMJ memiliki pengalaman dan fondasi kuat untuk kembali bangkit dengan pendekatan yang lebih modern
+                    dan strategis. Perusahaan ini memiliki keahlian khusus dalam mendukung distribusi dan logistik di
+                    berbagai proyek konstruksi dan industri.
                 </p>
             </div>
         </section>
 
         <!-- Services Section -->
         <section class="py-36 px-8 text-center">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-12">Our Services</h2>
-            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold font-inter text-gray-900 mb-12">Our Services</h2>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-10 max-w-7xl mx-auto lg:px-40">
                 <div class="bg-white shadow-lg rounded-3xl p-10 transition duration-300 hover:shadow-xl">
-                    <h3 class="text-2xl font-bold text-indigo-900 mb-4">Jasa Bongkar Muat Darat</h3>
-                    <p class="text-gray-600 text-lg">Proses pemindahan material dari transportasi darat ke lokasi tujuan
-                        dengan efisiensi tinggi.</p>
+                    <h3 class="text-2xl font-bold text-indigo-900 mb-6 font-inter">Jasa Bongkar Muat Darat</h3>
+                    <p class="text-gray-600 text-lg font-inter">PT. KSMJ berpengalaman menangani bongkar muat berbagai material konstruksi seperti batu, agregat, dan pasir, dengan fokus pada efisiensi, keselamatan, dan kelancaran proses.</p>
                 </div>
                 <div class="bg-white shadow-lg rounded-3xl p-10 transition duration-300 hover:shadow-xl">
-                    <h3 class="text-2xl font-bold text-indigo-900 mb-4">Ship to Ship (STS)</h3>
-                    <p class="text-gray-600 text-lg">Layanan pemindahan kargo antar kapal di perairan yang dilakukan dengan
-                        standar keselamatan internasional.</p>
-                </div>
-                <div class="bg-white shadow-lg rounded-3xl p-10 transition duration-300 hover:shadow-xl">
-                    <h3 class="text-2xl font-bold text-indigo-900 mb-4">Manajemen Logistik</h3>
-                    <p class="text-gray-600 text-lg">Penyediaan solusi transportasi dan distribusi material yang
-                        terintegrasi.</p>
+                    <h3 class="text-2xl font-bold text-indigo-900 mb-6 font-inter">Pengelolaan Alat Berat</h3>
+                    <p class="text-gray-600 text-lg font-inter">Menyediakan operator dan alat berat seperti excavator dan dump truck untuk keperluan penggalian, pemindahan, hingga distribusi material di area proyek maupun tambang.</p>
                 </div>
             </div>
         </section>

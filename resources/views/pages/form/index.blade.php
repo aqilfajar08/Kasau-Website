@@ -67,9 +67,23 @@
                                             <td>{{ $form->first_name }} {{ $form->last_name }}</td>
                                             <td>{{ $form->email }}</td>
                                             <td>{{ $form->subject }}</td>
-                                            <td class="px-6 py-4 text-sm text-gray-500 max-w-xs truncate">{{ $form->message }}</td>   
+                                            <td class="px-6 py-4 text-sm text-gray-500 max-w-xs truncate">
+                                                {{ $form->message }}</td>
                                             <td>
                                                 <a href="{{ route('form.show', $form->id) }}">Detail</a>
+                                                <div class="bullet"></div>
+                                                <a href="#" class="text-danger"
+                                                    onclick="event.preventDefault(); 
+                                                    if (confirm('Are you sure want to delete this form?')) {
+                                                        document.getElementById('delete-form-{{ $form->id }}').submit();
+                                                    }"
+                                                    >Trash</a>
+                                                <form id="delete-form-{{ $form->id }}"
+                                                    action="{{ route('form.destroy', $form->id) }}" method="POST"
+                                                    style="display: none;">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                </form>
                                             </td>
                                         </tr>
                                     @endforeach

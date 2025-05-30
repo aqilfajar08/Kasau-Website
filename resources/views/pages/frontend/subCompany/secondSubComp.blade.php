@@ -39,16 +39,18 @@
     <div class="bg-[#f5efeb] text-gray-800 min-h-screen">
         @include('components.kasau.customHeader')
 
-        <section class="relative w-full min-h-screen flex items-center justify-center flex-col px-4 lg:px-20">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-center font-bold">
+        <section class="relative w-full min-h-screen flex items-center justify-center flex-col px-4 py-20 lg:px-20">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-center font-bold font-inter">
                 Kasau <span class="text-yellow-500">Sinar</span> Sejahtera <span class="text-yellow-500">Abadi</span>
             </h1>
-            <p class="mt-10 text-gray-700 text-base sm:text-base md:text-xl lg:text-2xl px-4 sm:px-8 md:px-16 lg:px-20 max-w-6xl">
-                Kasau Sinar Sejahtera Abadi adalah salah satu anak perusahaan dari Kasau Group yang bergerak di bidang jasa
-                pengadaan material logistik. Dengan memiliki armada sendiri, kami dapat menawarkan harga yang lebih
-                kompetitif, serta memastikan distribusi yang efisien dan tepat waktu.
+            <p
+                class="mt-10 font-inter text-gray-700 text-base sm:text-base md:text-xl lg:text-2xl px-4 sm:px-8 md:px-16 lg:px-20 max-w-6xl">
+                Kasau Sinar Sejahtera Abadi adalah salah satu bagian dari Kasau Group yang bergerak di bidang jasa pengadaan
+                material logistik. Dengan memiliki armada sendiri, kami dapat menawarkan harga yang lebih kompetitif, serta
+                memastikan distribusi yang efisien dan tepat waktu.
             </p>
-            <p class="mt-5 text-gray-700 text-base sm:text-base md:text-xl lg:text-2xl px-4 sm:px-8 md:px-16 lg:px-20 max-w-6xl">
+            <p
+                class="mt-5 font-inter text-gray-700 text-base sm:text-base md:text-xl lg:text-2xl px-4 sm:px-8 md:px-16 lg:px-20 max-w-6xl">
                 Dengan kapasitas produksi lebih dari 30 ribu ton material dan stockpile berkapasitas lebih dari 50 ribu ton,
                 kami mampu menekan biaya operasional dan menjaga stabilitas harga, terutama di wilayah Balikpapan.
                 Perusahaan kami berkomitmen untuk terus memperluas wilayah operasional guna menjadi pusat industri bisnis
@@ -63,30 +65,51 @@
                 <!-- Service Card -->
                 <div
                     class="bg-[#303030] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-3 sm:p-4">
-                    <img src="{{ asset('img/kasau/subCompany/house_big.jpg') }}" alt="Ash Stone"
+                    <img src="{{ asset('img/kasau/subCompany/batu_abu.jpg') }}" alt="Ash Stone"
                         class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
                     <div class="p-4 sm:p-6">
-                        <h3 class="text-lg md:text-xl font-bold text-white mb-4">Ash Stone / Batu Abu</h3>
-                        <p class="text-white mb-2">Kegunaan:</p>
-                        <p class="text-[#9EBAFF]">Paving Block, Batako Press</p>
+                        <h3 class="text-lg font-inter md:text-xl font-bold text-white mb-4">Ash Stone / Batu Abu</h3>
+                        <p class="text-white mb-2 font-inter">Kegunaan:</p>
+                        <p class="text-[#9EBAFF] font-inter">Paving Block, Batako Press</p>
                     </div>
                 </div>
 
                 <div
                     class="bg-[#303030] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-3 sm:p-4">
-                    <img src="{{ asset('img/kasau/subCompany/house_big-1.jpg') }}" alt="Ash Stone"
+                    <img src="{{ asset('img/kasau/subCompany/batu_pecah-1.jpg') }}" alt="Ash Stone"
                         class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
                     <div class="p-4 sm:p-6">
-                        <h3 class="text-lg md:text-xl font-bold text-white mb-4">Split Stone / Batu Pecah</h3>
+                        <h3 class="text-lg font-inter md:text-xl font-bold text-white mb-4">Split Stone / Batu Pecah</h3>
 
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 sm:pt-3">
                             <div>
-                                <p class="text-white mb-2">Kegunaan:</p>
-                                <p class="text-[#9EBAFF]">Material Tambahan Pemberat Pipa Laut</p>
+                                <p class="text-white mb-2 font-inter">Kegunaan:</p>
+                                <p class="text-[#9EBAFF] font-inter">Material Struktur Jalan atau Beton</p>
                             </div>
                             <div>
-                                <p class="text-white mb-2">Size:</p>
+                                <p class="text-white mb-2 font-inter">Size:</p>
+                                <p class="text-[#9EBAFF] font-inter">10-20MM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-[#303030] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-3 sm:p-4">
+                    <img src="{{ asset('img/kasau/subCompany/batu_pecah.jpg') }}" alt="Split Stone"
+                        class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg font-inter md:text-xl font-bold text-white mb-4">Split Stone / Batu Pecah</h3>
+
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 sm:pt-3">
+                            <div>
+                                <p class="text-white mb-2 font-inter">Kegunaan:</p>
+                                <p class="text-[#9EBAFF] font-inter">Material Tambahan Pemberat Pipa Laut</p>
+                            </div>
+                            <div>
+                                <p class="text-white mb-2 font-inter">Size:</p>
                                 <p class="text-[#9EBAFF]">30-55MM</p>
                             </div>
                         </div>
@@ -95,28 +118,22 @@
 
                 <div
                     class="bg-[#303030] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-3 sm:p-4">
-                    <img src="{{ asset('img/kasau/subCompany/house_big-2.jpg') }}" alt="Ash Stone"
+                    <img src="{{ asset('img/kasau/subCompany/batu_pondasi.jpg') }}" alt="Foundation Stone"
                         class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
                     <div class="p-4 sm:p-6">
-                        <h3 class="text-lg md:text-xl font-bold text-white mb-4">Split Stone / Batu Pecah</h3>
+                        <h3 class="text-lg font-inter md:text-xl font-bold text-white mb-4">Foundation Stone / Batu Pondasi</h3>
 
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 sm:pt-3">
                             <div>
-                                <p class="text-white mb-2">Kegunaan:</p>
-                                <p class="text-[#9EBAFF]">Material Struktur Jalan atau Beton</p>
+                                <p class="text-white mb-2 font-inter">Kegunaan:</p>
+                                <p class="text-[#9EBAFF] font-inter">Pondasi Bangunan</p>
                             </div>
-                            <div>
-                                <p class="text-white mb-2">Size:</p>
-                                <p class="text-[#9EBAFF]">10-20MM</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
-            @include('components.kasau.footer')
-        </div>
+        @include('components.kasau.footer')
+    </div>
 @endsection
 
 @section('scripts')

@@ -13,10 +13,13 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     <link rel="icon" href="{{ asset('img/kasau/logo/logo.svg') }}" class="scale-150" type="image/x-icon">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
     <!-- Scripts and Styles -->
-    {{-- Dengan ini --}}
-    <link rel="stylesheet" href="{{ asset('build/assets/app-3634cf44.css') }}">
-    <script src="{{ asset('build/assets/app-a89463d6.js') }}" defer></script>
+    <link rel="stylesheet" href="{{ asset('build/assets/app-abd0c2d5.css') }}">
+    <script src="{{ asset('build/assets/app-7a0dd76d.js') }}" defer></script>
 </head>
 <body class="font-sans antialiased">
     <div class="min-h-screen">

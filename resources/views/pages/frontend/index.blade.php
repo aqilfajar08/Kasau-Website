@@ -110,12 +110,12 @@
             <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50"></div>
             <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 lg:pt-40">
                 <div class="fade-in space-y-6">
-                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold font-inter text-white leading-tight">
                         Material Supplier Partner<br class="hidden sm:block" />
                         <span class="text-orange-400">and Ship Service</span><br class="hidden sm:block" />
                         Provider
                     </h1>
-                    <p class="mt-4 text-sm md:text-base max-w-xl text-white">
+                    <p class="mt-4 text-sm md:text-base max-w-xl font-inter text-white">
                         The Best Leading Shipping Service Company and Supplier in Indonesia,
                         Headquartered in Balikpapan City, East Kalimantan
                     </p>
@@ -129,20 +129,18 @@
                 <div
                     class="bg-white shadow-2xl transition-all duration-200 rounded-2xl p-8 
                         transform hover:shadow-orange-200/20">
-                    <h2 class="text-2xl md:text-3xl font-bold text-center mb-6">Our Achievement</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold font-inter text-center mb-6">Our Achievement</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
-                        @foreach ([['count' => '30+', 'label' => 'Partner', 'icon' => 'icon1.svg'], ['count' => '15+', 'label' => 'Route', 'icon' => 'icon2.svg'], ['count' => '7', 'label' => 'Armada', 'icon' => 'icon3.svg']] as $stat)
+                        @foreach ([['count' => '30+', 'label' => 'Partner', 'icon' => 'icon3.svg'], ['count' => '15+', 'label' => 'Route', 'icon' => 'icon1.svg'], ['count' => '7', 'label' => 'Armada', 'icon' => 'icon2.svg']] as $stat)
                             <div class="hover-scale p-6 text-center">
                                 <div class="flex items-center justify-center space-x-4">
                                     <img src="{{ asset('img/kasau/icon/' . $stat['icon']) }}" alt="{{ $stat['label'] }}"
                                         class="w-14 h-14 object-contain">
                                     <div>
-                                        <div
-                                            class="text-4xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 
-                                              bg-clip-text text-transparent">
+                                        <div class="text-4xl font-bold">
                                             {{ $stat['count'] }}
                                         </div>
-                                        <p class="mt-2 text-gray-600 font-medium">{{ $stat['label'] }}</p>
+                                        <p class="mt-2 text-gray-600 font-inter">{{ $stat['label'] }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -163,7 +161,7 @@
                         Check Out Our History
                     </h2>
                     <p class="text-sm md:text-base text-white/80 mb-6 text-left slide-up max-w-xl ml-auto">
-                        Cerita Sejarah Panjang Mengenai Perusahaan Kasau Group. Berkembang Dengan Pesat Dengan Strategi Yang
+                        Cerita Sejarah Panjang Mengenai Perusahaan Kasau Group, Berkembang Dengan Pesat Dengan Strategi Yang
                         Matang.
                         <a href="{{ route('kasau-about') }}">
                             <button
@@ -182,32 +180,30 @@
         <section id="company" class="text-center px-6 max-w-6xl mx-auto py-20 " data-aos="fade-up"
             data-aos-duration="1000">
             <h1 class="text-[40px] font-bold mb-4 relative inline-block">
-                Our Sub Company
+                Our Company
                 <span class="absolute bottom-0 left-0 w-full"></span>
             </h1>
             <p class="text-sm text-gray-600 max-w-xl mx-auto mb-12">
-                Seiring pesatnya perkembangan Kasaugroup, kami kini hadir melalui tiga anak perusahaan unggulan yang
-                bergerak di
-                berbagai bidang, Kami siap memberikan solusi terbaik dan terintegrasi untuk memenuhi setiap kebutuhan Anda
+                Seiring perkembangan pesat PT Kasau Group, kini kami hadir dengan tiga anak perusahaan unggulan yang bergerak di berbagai bidang—siap memberikan solusi terbaik untuk kebutuhan kalian.
             </p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 @foreach ([
             [
-                'image' => 'subComp3.svg',
+                'image' => 'subComp1.svg',
                 'title' => 'Kasau Sinar Multi Jasa',
-                'description' => 'Jasa alih bongkar muat Ship to Ship, dan transportasi material dengan efisien.',
+                'description' => 'Jasa ahli bongkar muat, Ship to Ship, dan transportasi material dengan efisien.',
                 'delay' => '400',
                 'url' => '/kasau-sinar-multi-jasa',
             ],
             [
-                'image' => 'subComp1.svg',
+                'image' => 'subComp2.svg',
                 'title' => 'Kasau Sinar Sejahtera Abadi',
                 'description' => 'Pengadaan Material Logistik Berkualitas Dengan Armada Sendiri & Harga Terbaik',
                 'delay' => '200',
                 'url' => '/kasau-sinar-sejahtera-abadi',
             ],
             [
-                'image' => 'subComp2.svg',
+                'image' => 'subComp3.svg',
                 'title' => 'Kasau Sinar Samudera',
                 'description' => 'Jasa Angkutan Laut dan Sewa Kapal Untuk Transportasi Material',
                 'delay' => '0',
@@ -241,7 +237,7 @@
             <div class="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center">
                 @foreach ($latestNews as $news)
                     <a href="{{ $news->url }}"
-                        class="group block w-full max-w-xs mx-auto bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out min-h-[450px] flex flex-col">
+                        class="group w-full max-w-xs mx-auto bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out min-h-[450px] flex flex-col">
                         <div class="relative overflow-hidden h-52 rounded-t-2xl">
                             <img src="{{ asset('storage/news/' . $news->image) }}" alt="{{ $news->title }}"
                                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
@@ -251,10 +247,10 @@
                             </span>
                         </div>
                         <div class="flex flex-col px-6 sm:px-8 md:px-10 py-6 flex-grow min-h-[200px] md:min-h-[300px]">
-                            <h3 class="text-lg md:text-xl font-bold text-[#02033B] leading-tight line-clamp-2 pb-3">
+                            <h3 class="text-lg md:text-xl font-bold text-[#02033B] leading-tight pb-3">
                                 {{ $news->title }}
                             </h3>
-                            <p class="text-sm flex-grow leading-relaxed md:line-clamp-4 line-clamp-none">
+                            <p class="text-sm flex-grow leading-relaxed">
                                 {{ $news->description }}
                             </p>
                             <div class="mt-4 text-xs text-gray-500 select-none">
