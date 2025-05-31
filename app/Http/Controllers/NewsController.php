@@ -33,7 +33,7 @@ class NewsController extends Controller
         $request->validate([
             'title' => 'required',
             'image' => 'required',
-            'url' => 'url',
+            'url' => 'url|nullable',
             'description' => 'required|max:245',
         ]);
 
@@ -69,7 +69,7 @@ class NewsController extends Controller
         $request->validate([
             'title' => 'required',
             'image' => 'image|mimes:png,jpg,jpeg|max:2048',
-            'url' => 'url',
+            'url' => 'url|nullable',
             'description' => 'required|max:245',
         ]);
 
