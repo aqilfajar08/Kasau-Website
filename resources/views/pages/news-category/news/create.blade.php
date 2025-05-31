@@ -18,9 +18,9 @@
             <div class="section-header">
                 <h1>Create a News</h1>
                 <div class="section-header-breadcrumb">
-                    <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-                    <div class="breadcrumb-item"><a href="#">Forms</a></div>
-                    <div class="breadcrumb-item">Create a News</div>
+                    <div class="breadcrumb-item"><a href="{{ route('news-category.index') }}">News Data</a></div>
+                    <div class="breadcrumb-item"><a href="{{ route('new.index', $category->id) }}">News {{ $category->name }} Data</a></div>
+                    <div class="breadcrumb-item">Create {{ $category->name }} News</div>
                 </div>
             </div>
 
@@ -50,7 +50,7 @@
                                                 </div>
                                             @enderror
                                         </div>
-                                        
+
                                         <div class="form-group">
                                             <label for="url">Social Media url</label>
                                             <input type="text" name="url" id="url" value="{{ old('url') }}"
@@ -65,7 +65,8 @@
                                         <div class="form-group flex flex-col">
                                             <label for="description">Description</label>
                                             <div class="flex justify-between text-sm mb-1">
-                                                <span>Maximum Character: <span id="char-count" class="text-gray-600">0 / 500</span></span>
+                                                <span>Maximum Character: <span id="char-count" class="text-gray-600">0 /
+                                                        500</span></span>
                                             </div>
                                             <textarea name="description" id="description" rows="4" maxlength="500"
                                                 class="p-3 rounded-lg border border-gray-200 @error('description') is-invalid @enderror"

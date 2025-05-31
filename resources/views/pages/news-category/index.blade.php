@@ -16,9 +16,8 @@
                     <a href="{{ route('news-category.create') }}" class="btn btn-primary">Add New</a>
                 </div>
                 <div class="section-header-breadcrumb">
-                    <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-                    <div class="breadcrumb-item"><a href="#">Form</a></div>
-                    <div class="breadcrumb-item">User Forms</div>
+                    <div class="breadcrumb-item active"><a href="{{ route('home') }}">Dashboard</a></div>
+                    <div class="breadcrumb-item"><a href="{{ route('news-category.index') }}">News Data</a></div>
                 </div>
             </div>
             @include('layouts.alert')

@@ -18,9 +18,9 @@
             <div class="section-header">
                 <h1>Edit a New</h1>
                 <div class="section-header-breadcrumb">
-                    <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-                    <div class="breadcrumb-item"><a href="#">Forms</a></div>
-                    <div class="breadcrumb-item">Edit a New</div>
+                    <div class="breadcrumb-item"><a href="{{ route('news-category.index') }}">News Data</a></div>
+                    <div class="breadcrumb-item"><a href="{{ route('new.index', $category->id) }}">News {{ $category->name }} Data</a></div>
+                    <div class="breadcrumb-item">Edit a {{ $category->name }} New</div>
                 </div>
             </div>
 

@@ -16,9 +16,8 @@
                     <a href="{{ route('company_partner.create') }}" class="btn btn-primary">Add New</a>
                 </div>
                 <div class="section-header-breadcrumb">
-                    <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-                    <div class="breadcrumb-item"><a href="#">Users</a></div>
-                    <div class="breadcrumb-item">All Users</div>
+                    <div class="breadcrumb-item active"><a href="{{ route('home') }}">Dashboard</a></div>
+                    <div class="breadcrumb-item"><a href="#">Company Partner List</a></div>
                 </div>
             </div>
             @include('layouts.alert')
@@ -65,10 +64,11 @@
                                                         if (confirm('Are you sure want to delete this Company?')) 
                                                         {
                                                             document.getElementById('delete-form-{{ $company->id }}').submit();
-                                                        }"
-                                                        >Trash</a>
-                                                        <form action="{{ route('company_partner.destroy', $company->id) }}" method="POST" id="delete-form-{{ $company->id }}" style="display:none;"> 
-                                                            @csrf @method('DELETE')
+                                                        }">Trash</a>
+                                                    <form action="{{ route('company_partner.destroy', $company->id) }}"
+                                                        method="POST" id="delete-form-{{ $company->id }}"
+                                                        style="display:none;">
+                                                        @csrf @method('DELETE')
                                                     </form>
                                                 </div>
                                             </td>

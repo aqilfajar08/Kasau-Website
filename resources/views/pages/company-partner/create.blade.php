@@ -18,9 +18,9 @@
             <div class="section-header">
                 <h1>Advanced Forms</h1>
                 <div class="section-header-breadcrumb">
-                    <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-                    <div class="breadcrumb-item"><a href="#">Forms</a></div>
-                    <div class="breadcrumb-item">Advanced Forms</div>
+                    <div class="breadcrumb-item active"><a href="{{ route('home') }}">Dashboard</a></div>
+                    <div class="breadcrumb-item"><a href="{{ route('company_partner.index') }}">Company Partner List</a></div>
+                    <div class="breadcrumb-item"><a href="#">Create Company Partner</a></div>
                 </div>
             </div>
 
