@@ -9,15 +9,9 @@ use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\RatingController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('pages.auth.login');
-});
-
-Route::get('/home', function () {
-    return view('pages.dashboard');
-});
-
 Route::middleware(['auth', 'role:admin'])->group(function () {
+    Route::get('/index', [\App\Http\Controllers\LoginController::class, 'login'])->name('index');
+    
     Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::resource('/user', UserController::class);
     Route::resource('/company_partner', CompanyPartnerController::class);
@@ -36,13 +30,12 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::resource('/news-category', NewsCategoryController::class);
     Route::resource('/news-category/{category_id}/new', ControllersNewsController::class);
     // end of News Category
-
-
+ 
     Route::get('/notifications/{id}/redirect', [NotificationController::class, 'handleNotification'])->name('notifications.handle');
 });
 
 // kasau route
-Route::get('/kasau-home', [\App\Http\Controllers\kasau\HomeController::class, 'index'])->name('kasau-home');
+Route::get('/', [\App\Http\Controllers\kasau\HomeController::class, 'index'])->name('kasau-home');
 Route::get('/kasau-about', [\App\Http\Controllers\kasau\AboutController::class, 'about'])->name('kasau-about');
 Route::get('/kasau-sinar-multi-jasa', [\App\Http\Controllers\kasau\SubCompController::class, 'SubCompany'])->name('kasau-sinar-multi-jasa');
 Route::get('/kasau-sinar-sejahtera-abadi', [\App\Http\Controllers\kasau\SubCompController::class, 'SecondSubCompany'])->name('kasau-sinar-sejahtera-abadi');
