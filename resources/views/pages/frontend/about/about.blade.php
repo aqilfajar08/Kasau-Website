@@ -110,7 +110,7 @@
                             <li>• Kapasitas produksi: >30.000 ton material/bulan</li>
                             <li>• Kapasitas stockpile: >5.000 ton material</li>
                         </ul>
-                        <a href="https://backend-kasau.test/kasau-sinar-sejahtera-abadi" class="inline-block text-yellow-500 hover:text-yellow-600">Learn more →</a>
+                        <a href="https://kasau-website.test/kasau-sinar-sejahtera-abadi" class="inline-block text-yellow-500 hover:text-yellow-600">Learn more →</a>
                     </div>
                 </div>
             </div>

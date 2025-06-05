@@ -90,64 +90,6 @@
                     @endforelse
                 </div>
             </div>
-
-            <!-- Footer with Feedback Section -->
-            {{-- <div class="mt-20 bg-gray-900 text-white rounded-2xl p-8 md:p-12">
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Company Info -->
-                <div>
-                    <h3 class="text-2xl font-bold mb-6">Kasau Group</h3>
-                    <div class="flex space-x-4 mb-6">
-                        <a href="#" class="hover:text-orange-400 transition-colors">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="hover:text-orange-400 transition-colors">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="#" class="hover:text-orange-400 transition-colors">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="#" class="hover:text-orange-400 transition-colors">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                    <nav class="grid grid-cols-2 gap-4 text-sm">
-                        <a href="#" class="hover:text-orange-400 transition-colors">Home</a>
-                        <a href="#" class="hover:text-orange-400 transition-colors">Beranda</a>
-                        <a href="#" class="hover:text-orange-400 transition-colors">History</a>
-                        <a href="#" class="hover:text-orange-400 transition-colors">SubCompany</a>
-                        <a href="#" class="hover:text-orange-400 transition-colors">All News</a>
-                    </nav>
-                </div>
-
-                <!-- Feedback Form -->
-                <div class="bg-black/30 rounded-xl p-6">
-                    <h3 class="text-xl font-bold mb-4">Session feedback</h3>
-                    <div class="star-rating flex space-x-2 mb-4">
-                        @for ($i = 1; $i <= 5; $i++)
-                            <button class="text-2xl text-yellow-400 transition-all duration-200">★</button>
-                        @endfor
-                    </div>
-                    <textarea class="w-full bg-black/20 rounded-lg p-4 text-white placeholder-gray-400 mb-4" 
-                              placeholder="Additional feedback" rows="3"></textarea>
-                    <button class="w-full bg-yellow-500 text-black font-bold py-3 rounded-lg hover:bg-yellow-400 
-                                 transition-all duration-200 mb-4">
-                        Submit Feedback
-                    </button>
-                    <div class="flex justify-between">
-                        <button class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fas fa-home mr-2"></i> Home
-                        </button>
-                        <button class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fas fa-envelope mr-2"></i> Contact
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center text-gray-400 text-sm mt-8">
-                © 2023 KasauGroup. All rights reserved.
-            </div>
-        </div> --}}
         </section>
         @include('components.kasau.footer')
     </div>

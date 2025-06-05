@@ -79,159 +79,153 @@
     </style>
 @endsection
 
-        <header x-data="{ isScrolled: false, mobileMenuOpen: false }" @scroll.window="isScrolled = (window.pageYOffset > 20)"
-            class="fixed bg-black/80 backdrop-blur-md top-0 left-0 w-full z-50 transition-all duration-300">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-                <div class="flex items-center justify-between">
+<header x-data="{ isScrolled: false, mobileMenuOpen: false }" @scroll.window="isScrolled = (window.pageYOffset > 20)"
+    class="fixed bg-black/80 backdrop-blur-md top-0 left-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div class="flex items-center justify-between">
 
-                    <!-- Logo -->
-                    <a href="{{ route('kasau-home') }}" class="cursor-pointer">
-                        <img src="{{ asset('img/kasau/logo/logo.svg') }}" alt="Logo"
-                            class="scale-150 h-8 md:h-10 transition-all">
-                    </a>
+            <!-- Logo -->
+            <a href="{{ route('kasau-home') }}" class="cursor-pointer">
+                <img src="{{ asset('img/kasau/logo/logo.svg') }}" alt="Logo"
+                    class="scale-150 h-8 md:h-10 transition-all">
+            </a>
 
-                    <!-- Mobile Menu Button -->
-                    <button @click="mobileMenuOpen = !mobileMenuOpen"
-                        class="md:hidden relative z-50 w-10 h-10 flex items-center justify-center
+            <!-- Mobile Menu Button -->
+            <button @click="mobileMenuOpen = !mobileMenuOpen"
+                class="md:hidden relative z-50 w-10 h-10 flex items-center justify-center
                                text-white focus:outline-none">
-                        <span class="sr-only">Toggle Menu</span>
-                        <svg x-show="!mobileMenuOpen" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                        <svg x-show="mobileMenuOpen" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
+                <span class="sr-only">Toggle Menu</span>
+                <svg x-show="!mobileMenuOpen" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg x-show="mobileMenuOpen" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
 
-                    <!-- Desktop Navigation -->
-                    <nav class="hidden md:flex items-center space-x-8">
-                        <ul class="flex items-center space-x-8">
-                            <li
-                                class="text-white hover:text-orange-400 transition-colors text-sm font-medium
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <ul class="flex items-center space-x-8">
+                    <li
+                        class="text-white hover:text-orange-400 transition-colors text-sm font-medium
                                   relative after:absolute after:bottom-0 after:left-0 after:w-0 
                                   after:h-0.5 after:bg-orange-400 after:transition-all hover:after:w-full">
-                                <a href="https://backend-kasau.test/kasau-home">Home</a>
-                            </li>
-                            <li
-                                class="text-white hover:text-orange-400 transition-colors text-sm font-medium
+                        <a href="https://kasau-website.test/kasau-home">Home</a>
+                    </li>
+                    <li
+                        class="text-white hover:text-orange-400 transition-colors text-sm font-medium
                                   relative after:absolute after:bottom-0 after:left-0 after:w-0 
                                   after:h-0.5 after:bg-orange-400 after:transition-all hover:after:w-full">
-                                <a href="https://backend-kasau.test/kasau-home#about">About</a>
-                            </li>
-                            <li
-                                class="text-white hover:text-orange-400 transition-colors text-sm font-medium
+                        <a href="https://kasau-website.test/#about">About</a>
+                    </li>
+                    <li
+                        class="text-white hover:text-orange-400 transition-colors text-sm font-medium
                                   relative after:absolute after:bottom-0 after:left-0 after:w-0
                                   after:h-0.5 after:bg-orange-400 after:transition-all hover:after:w-full">
-                                <a href="https://backend-kasau.test/kasau-home#company">Company</a>
-                            </li>
-                            <li
-                                class="text-white hover:text-orange-400 transition-colors text-sm font-medium
+                        <a href="https://kasau-website.test/#company">Company</a>
+                    </li>
+                    <li
+                        class="text-white hover:text-orange-400 transition-colors text-sm font-medium
                                   relative after:absolute after:bottom-0 after:left-0 after:w-0 
                                   after:h-0.5 after:bg-orange-400 after:transition-all hover:after:w-full">
-                                <a href="https://backend-kasau.test/kasau-partner">Partner</a>
-                            </li>
-                        </ul>
-                        <a href="{{ route('kasau-form') }}">
-                            <button
-                                class="bg-gradient-to-r from-orange-400 to-orange-500 text-white 
+                        <a href="https://kasau-website.test/kasau-partner">Partner</a>
+                    </li>
+                </ul>
+                <a href="{{ route('kasau-form') }}">
+                    <button
+                        class="bg-gradient-to-r from-orange-400 to-orange-500 text-white 
                                          px-6 py-2 rounded-full font-medium hover:shadow-lg 
                                         transform hover:scale-105 transition-all">
-                                Contact
-                            </button>
+                        Contact
+                    </button>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav x-show="mobileMenuOpen" x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-4" @click.away="mobileMenuOpen = false"
+            class="md:hidden fixed top-[60px] left-0 w-full bg-black/80 backdrop-blur-md py-4 px-4">
+            <div class="space-y-2">
+                <ul class="space-y-2">
+                    <li>
+                        <a href="https://kasau-website.test/#home" @click="mobileMenuOpen = false"
+                            class="block py-3 px-4 text-white hover:bg-white/10 rounded-lg 
+                                   transition-all duration-200 relative overflow-hidden group">
+                            <span class="relative z-10 flex items-center justify-between">
+                                <span class="text-sm font-medium">Home</span>
+                                <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </span>
                         </a>
-                    </nav>
-                </div>
+                    </li>
 
-                <!-- Mobile Navigation -->
-                <nav x-show="mobileMenuOpen" x-transition:enter="transition ease-out duration-200"
-                    x-transition:enter-start="opacity-0 -translate-y-4"
-                    x-transition:enter-end="opacity-100 translate-y-0"
-                    x-transition:leave="transition ease-in duration-150"
-                    x-transition:leave-start="opacity-100 translate-y-0"
-                    x-transition:leave-end="opacity-0 -translate-y-4" @click.away="mobileMenuOpen = false"
-                    class="md:hidden fixed top-[60px] left-0 w-full bg-black/80 backdrop-blur-md py-4 px-4">
-                    <div class="space-y-2">
-                        <ul class="space-y-2">
-                            <li>
-                                <a href="https://backend-kasau.test/kasau-home" @click="mobileMenuOpen = false"
-                                    class="block py-3 px-4 text-white hover:bg-white/10 rounded-lg 
+                    <li>
+                        <a href="https://kasau-website.test/#about" @click="mobileMenuOpen = false"
+                            class="block py-3 px-4 text-white hover:bg-white/10 rounded-lg 
                                    transition-all duration-200 relative overflow-hidden group">
-                                    <span class="relative z-10 flex items-center justify-between">
-                                        <span class="text-sm font-medium">Home</span>
-                                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M9 5l7 7-7 7" />
-                                        </svg>
-                                    </span>
-                                </a>
-                            </li>
+                            <span class="relative z-10 flex items-center justify-between">
+                                <span class="text-sm font-medium">About</span>
+                                <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
 
-                            <li>
-                                <a href="https://backend-kasau.test/kasau-home#about" @click="mobileMenuOpen = false"
-                                    class="block py-3 px-4 text-white hover:bg-white/10 rounded-lg 
+                    <li>
+                        <a href="https://kasau-website.test/#company" @click="mobileMenuOpen = false"
+                            class="block py-3 px-4 text-white hover:bg-white/10 rounded-lg 
                                    transition-all duration-200 relative overflow-hidden group">
-                                    <span class="relative z-10 flex items-center justify-between">
-                                        <span class="text-sm font-medium">About</span>
-                                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M9 5l7 7-7 7" />
-                                        </svg>
-                                    </span>
-                                </a>
-                            </li>
+                            <span class="relative z-10 flex items-center justify-between">
+                                <span class="text-sm font-medium">Company</span>
+                                <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
 
-                            <li>
-                                <a href="https://backend-kasau.test/kasau-home#company" @click="mobileMenuOpen = false"
-                                    class="block py-3 px-4 text-white hover:bg-white/10 rounded-lg 
+                    <li>
+                        <a href="https://kasau-website.test/kasau-partner" @click="mobileMenuOpen = false"
+                            class="block py-3 px-4 text-white hover:bg-white/10 rounded-lg 
                                    transition-all duration-200 relative overflow-hidden group">
-                                    <span class="relative z-10 flex items-center justify-between">
-                                        <span class="text-sm font-medium">Company</span>
-                                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M9 5l7 7-7 7" />
-                                        </svg>
-                                    </span>
-                                </a>
-                            </li>
+                            <span class="relative z-10 flex items-center justify-between">
+                                <span class="text-sm font-medium">Partner</span>
+                                <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
 
-                            <li>
-                                <a href="https://backend-kasau.test/kasau-partner" @click="mobileMenuOpen = false"
-                                    class="block py-3 px-4 text-white hover:bg-white/10 rounded-lg 
-                                   transition-all duration-200 relative overflow-hidden group">
-                                    <span class="relative z-10 flex items-center justify-between">
-                                        <span class="text-sm font-medium">Partner</span>
-                                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M9 5l7 7-7 7" />
-                                        </svg>
-                                    </span>
-                                </a>
-                            </li>
-
-                            <!-- Mobile Contact Button -->
-                            <div class="pt-4 pb-2">
-                                <a href="{{ route('kasau-form') }}">
-                                    <button
-                                        class="w-full bg-gradient-to-r from-orange-400 to-orange-500 
+                    <!-- Mobile Contact Button -->
+                    <div class="pt-4 pb-2">
+                        <a href="{{ route('kasau-form') }}">
+                            <button
+                                class="w-full bg-gradient-to-r from-orange-400 to-orange-500 
                                          text-white px-6 py-3 rounded-lg font-medium 
                                          hover:shadow-lg hover:shadow-orange-500/25
                                          active:scale-95 transform transition-all duration-200">
-                                        Contact Us
-                                    </button>
-                                </a>
-                            </div>
+                                Contact Us
+                            </button>
+                        </a>
                     </div>
-                </nav>
             </div>
-        </header>
+        </nav>
+    </div>
+</header>
 
 @section('scripts')
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
