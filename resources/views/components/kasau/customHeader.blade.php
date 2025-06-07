@@ -110,7 +110,7 @@
                         class="text-white hover:text-orange-400 transition-colors text-sm font-medium
                                   relative after:absolute after:bottom-0 after:left-0 after:w-0 
                                   after:h-0.5 after:bg-orange-400 after:transition-all hover:after:w-full">
-                        <a href="https://kasau-website.test/kasau-home">Home</a>
+                        <a href="https://kasau-website.test">Home</a>
                     </li>
                     <li
                         class="text-white hover:text-orange-400 transition-colors text-sm font-medium
