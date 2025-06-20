@@ -32,6 +32,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     // end of News Category
  
     Route::get('/notifications/{id}/redirect', [NotificationController::class, 'handleNotification'])->name('notifications.handle');
+    Route::get('/notifications/mark-all-as-read', [NotificationController::class, 'markAllAsRead'])->name('notifications.markAllAsRead');
 });
 
 // kasau route
