@@ -7,6 +7,7 @@ use App\Http\Controllers\NewsCategoryController;
 use App\Http\Controllers\NewsController as ControllersNewsController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\RatingController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth', 'role:admin'])->group(function () {
@@ -51,3 +52,10 @@ Route::post('/rating', [\App\Http\Controllers\RatingController::class, 'store'])
 Route::post('/form', [\App\Http\Controllers\FormController::class, 'store'])->name('form.store');
 Route::get('/kasau-thanks', [\App\Http\Controllers\kasau\ThanksController::class, 'index'])->name('kasau-thanks');
 Route::get('/kasau-thanksForm', [\App\Http\Controllers\kasau\ThanksController::class, 'formThanks'])->name('kasau-thanksForm');
+
+Route::get('/artisan-call', function(){
+    Artisan::call('storage:link'); //storage:link
+    Artisan::call('route:clear'); //route:clear
+    Artisan::call('config:clear'); //config:clear
+    return 'success';
+});
