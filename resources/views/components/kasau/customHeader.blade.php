@@ -110,25 +110,25 @@
                         class="text-white hover:text-orange-400 transition-colors text-sm font-medium
                                   relative after:absolute after:bottom-0 after:left-0 after:w-0 
                                   after:h-0.5 after:bg-orange-400 after:transition-all hover:after:w-full">
-                        <a href="https://kasau-website.test">Home</a>
+                        <a href="{{ route('kasau-home') }}">Home</a>
                     </li>
                     <li
                         class="text-white hover:text-orange-400 transition-colors text-sm font-medium
                                   relative after:absolute after:bottom-0 after:left-0 after:w-0 
                                   after:h-0.5 after:bg-orange-400 after:transition-all hover:after:w-full">
-                        <a href="https://kasau-website.test/#about">About</a>
+                        <a href="{{ route('kasau-about') }}">About</a>
                     </li>
                     <li
                         class="text-white hover:text-orange-400 transition-colors text-sm font-medium
                                   relative after:absolute after:bottom-0 after:left-0 after:w-0
                                   after:h-0.5 after:bg-orange-400 after:transition-all hover:after:w-full">
-                        <a href="https://kasau-website.test/#company">Company</a>
+                        <a href="{{ route('kasau-sinar-multi-jasa') }}">Company</a>
                     </li>
                     <li
                         class="text-white hover:text-orange-400 transition-colors text-sm font-medium
                                   relative after:absolute after:bottom-0 after:left-0 after:w-0 
                                   after:h-0.5 after:bg-orange-400 after:transition-all hover:after:w-full">
-                        <a href="https://kasau-website.test/kasau-partner">Partner</a>
+                        <a href="{{ route('kasau-partner') }}">Partner</a>
                     </li>
                 </ul>
                 <a href="{{ route('kasau-form') }}">
@@ -151,7 +151,7 @@
             <div class="space-y-2">
                 <ul class="space-y-2">
                     <li>
-                        <a href="https://kasau-website.test/#home" @click="mobileMenuOpen = false"
+                        <a href="{{ route('kasau-home') }}" @click="mobileMenuOpen = false"
                             class="block py-3 px-4 text-white hover:bg-white/10 rounded-lg 
                                    transition-all duration-200 relative overflow-hidden group">
                             <span class="relative z-10 flex items-center justify-between">
@@ -166,7 +166,7 @@
                     </li>
 
                     <li>
-                        <a href="https://kasau-website.test/#about" @click="mobileMenuOpen = false"
+                        <a href="{{ route('kasau-about') }}" @click="mobileMenuOpen = false"
                             class="block py-3 px-4 text-white hover:bg-white/10 rounded-lg 
                                    transition-all duration-200 relative overflow-hidden group">
                             <span class="relative z-10 flex items-center justify-between">
@@ -181,7 +181,7 @@
                     </li>
 
                     <li>
-                        <a href="https://kasau-website.test/#company" @click="mobileMenuOpen = false"
+                        <a href="{{ route('kasau-sinar-multi-jasa') }}" @click="mobileMenuOpen = false"
                             class="block py-3 px-4 text-white hover:bg-white/10 rounded-lg 
                                    transition-all duration-200 relative overflow-hidden group">
                             <span class="relative z-10 flex items-center justify-between">
@@ -196,7 +196,7 @@
                     </li>
 
                     <li>
-                        <a href="https://kasau-website.test/kasau-partner" @click="mobileMenuOpen = false"
+                        <a href="{{ route('kasau-partner') }}" @click="mobileMenuOpen = false"
                             class="block py-3 px-4 text-white hover:bg-white/10 rounded-lg 
                                    transition-all duration-200 relative overflow-hidden group">
                             <span class="relative z-10 flex items-center justify-between">
