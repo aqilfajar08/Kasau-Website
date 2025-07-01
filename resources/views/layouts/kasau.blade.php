@@ -18,8 +18,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- Scripts and Styles -->
-    <link rel="stylesheet" href="{{ asset('build/assets/app-SgnHw1xZ.css') }}">
-    <script src="{{ asset('build/assets/app-Bz8gI7s3.js') }}" defer></script>
+    <link rel="stylesheet" href="{{ asset('public/build/assets/app-DfLtbH02.css') }}">
+    <script src="{{ asset('public/build/assets/app-DVMFqpJC.js') }}" defer></script>
 </head>
 <body class="font-sans antialiased">
     <div class="min-h-screen">
