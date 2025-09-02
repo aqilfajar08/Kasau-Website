@@ -23,6 +23,9 @@ module.exports = {
         'screen-1/3': '33.333333vh',
         'screen-2/3': '66.666667vh',
       },
+      scale: {
+        '50': '50rem',
+      },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
       }

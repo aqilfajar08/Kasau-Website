@@ -184,17 +184,11 @@
                 <span class="absolute bottom-0 left-0 w-full"></span>
             </h1>
             <p class="text-sm text-gray-600 max-w-xl mx-auto mb-12">
-                Seiring perkembangan pesat PT Kasau Group, kini kami hadir dengan tiga anak perusahaan unggulan yang bergerak di berbagai bidang—siap memberikan solusi terbaik untuk kebutuhan kalian.
+                Seiring perkembangan pesat PT Kasau Group, kini kami hadir dengan tiga anak perusahaan unggulan yang
+                bergerak di berbagai bidang—siap memberikan solusi terbaik untuk kebutuhan kalian.
             </p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 @foreach ([
-            [
-                'image' => 'subComp1.svg',
-                'title' => 'Kasau Sinar Multi Jasa',
-                'description' => 'Jasa ahli bongkar muat, Ship to Ship, dan transportasi material dengan efisien.',
-                'delay' => '400',
-                'url' => '/kasau-sinar-multi-jasa',
-            ],
             [
                 'image' => 'subComp2.svg',
                 'title' => 'Kasau Sinar Sejahtera Abadi',
@@ -208,6 +202,13 @@
                 'description' => 'Jasa Angkutan Laut dan Sewa Kapal Untuk Transportasi Material',
                 'delay' => '0',
                 'url' => '/kasau-sinar-samudera',
+            ],
+            [
+                'image' => 'subComp1.svg',
+                'title' => 'Kasau Sinar Multi Jasa',
+                'description' => 'Jasa ahli bongkar muat, Ship to Ship, dan transportasi material dengan efisien.',
+                'delay' => '400',
+                'url' => '/kasau-sinar-multi-jasa',
             ],
         ] as $company)
                     <div class="card-hover-effect" data-aos="fade-up" data-aos-delay="{{ $company['delay'] }};">

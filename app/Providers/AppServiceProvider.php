@@ -22,11 +22,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(Request $request): void
     {
-        // if ($request->header('X-Forwarded-Proto') === 'https') {
-        //     URL::forceScheme('https');
-        // } else {
-        //     URL::forceScheme('http');
-        // }
+        // Handle Laravel Expose HTTPS forwarding
+        if ($request->header('X-Forwarded-Proto') === 'https' ||
+            $request->header('X-Forwarded-For') ||
+            str_contains($request->header('Host', ''), 'sharedwithexpose.com')) {
+            URL::forceScheme('https');
+        }
 
         Paginator::useBootstrapFive();
     }

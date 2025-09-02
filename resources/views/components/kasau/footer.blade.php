@@ -56,7 +56,7 @@
                     <div class="bg-black border-2 border-white rounded-xl text-white p-4 text-xs"
                         x-data="{ rating: 0, hover: 0 }">
                         <p class="font-semibold text-center text-sm text-white mb-2">Session Feedback</p>
-                        <div class="text-center text-xl mb-2">
+                        <div class="text-center text-xl mb-5">
                             <div class="flex justify-center space-x-1">
                                 @php for ($i = 1; $i <= 5; $i++): @endphp
                                     <button type="button" @click="rating = {{ $i }}"
@@ -79,25 +79,10 @@
                             <textarea name="review" class="w-full bg-black border p-2 rounded mb-2 text-sm" placeholder="Fill Your Feedback For KasauGroup Here!" rows="3" required></textarea>
                             <button type="submit"
                                 class="bg-yellow-400 w-full py-2 rounded hover:bg-yellow-500 
-                                    transition-colors duration-200 text-sm font-medium">
+                                    transition-colors duration-200 text-sm font-medium mt-5">
                                 Submit feedback
                             </button>
                         </form>
-                        <span class="text-sm text-gray-500 block my-1 text-center">
-                            or
-                        </span>
-                        <div class="flex items-center gap-x-2 mx-auto">
-                            <button
-                                class="bg-blue-100 w-full py-2 rounded 
-                                       transition-colors duration-200 text-sm font-medium text-black">
-                                <a href="#">Home</a>
-                            </button>
-                            <button
-                                class="bg-blue-100 w-full py-2 rounded 
-                                       transition-colors duration-200 text-sm font-medium text-black">
-                                <a href="">Contact</a>
-                            </button>
-                        </div>
                     </div>
                 </div>
                 <p class="text-center mt-6 text-xs text-gray-400">&copy; 2025 Kasau Group. All rights reserved.</p>

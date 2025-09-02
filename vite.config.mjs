@@ -11,6 +11,12 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    build: {
+        manifest: true,
+        outDir: 'public/build',
+        assetsDir: '',
+        emptyOutDir: true,
+    },
     server: {
         port: 8000,
         host: true,

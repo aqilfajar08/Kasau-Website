@@ -122,7 +122,7 @@
                         class="text-white hover:text-orange-400 transition-colors text-sm font-medium
                                   relative after:absolute after:bottom-0 after:left-0 after:w-0
                                   after:h-0.5 after:bg-orange-400 after:transition-all hover:after:w-full">
-                        <a href="{{ route('kasau-sinar-multi-jasa') }}">Company</a>
+                        <a href="{{ route('kasau-sinar-sejahtera-abadi') }}">Company</a>
                     </li>
                     <li
                         class="text-white hover:text-orange-400 transition-colors text-sm font-medium

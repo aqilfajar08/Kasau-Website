@@ -73,6 +73,128 @@
                     <p class="text-gray-600 text-lg font-inter">Menyediakan operator dan alat berat seperti excavator dan dump truck untuk keperluan penggalian, pemindahan, hingga distribusi material di area proyek maupun tambang.</p>
                 </div>
             </div>
+        </section>       
+
+
+        <!-- Services Section -->
+        <section id="services" class="my-8 px-4 sm:px-8 md:px-16 lg:px-40 relative min-h-screen py-8 md:py-20">
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#050038] text-center mb-8 lg:mb-12">Our Vehicles</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-10">
+                <!-- Service Card -->
+                <div
+                    class="bg-[#303030] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-3 sm:p-4">
+                    <img src="{{ asset('/img/kasau/subCompany/HINO-500-Series.jpg') }}" alt="Ash Stone"
+                        class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white font-inter mb-3 sm:mb-4">Hino 500 Series</h3>
+                    </div>
+                </div>
+
+                <!-- Repeat for other services with same enhanced structure -->
+                <div
+                    class="bg-[#303030] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-3 sm:p-4">
+                    <img src="{{ asset('/img/kasau/subCompany/ISUZU-ELF-NKR-125-PS.jpg') }}" alt="Split Stone"
+                        class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white font-inter mb-3 sm:mb-4">ISUZU ELF NKR 125 PS</h3>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-[#303030] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-3 sm:p-4">
+                    <img src="{{ asset('/img/kasau/subCompany/ISUZU Giga FVZ + Tadano TM-ZX1500 Crane Mounted Truck.jpg') }}" alt="Split Stone"
+                        class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white font-inter mb-3 sm:mb-4">ISUZU Giga FVZ + Tadano TM-ZX1500 Crane Mounted Truck</h3>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-[#303030] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-3 sm:p-4">
+                    <img src="{{ asset('/img/kasau/subCompany/UD CWA 260X.jpg') }}" alt="Split Stone"
+                        class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white font-inter mb-3 sm:mb-4">UD CWA 260X</h3>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-[#303030] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-3 sm:p-4">
+                    <img src="{{ asset('/img/kasau/subCompany/UD Nissan Diesel CW45 (C-Series), Year 1990 (Refurbished).jpg') }}" alt="Split Stone"
+                        class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white font-inter mb-3 sm:mb-4">UD Nissan Diesel CW45 (C-Series), Year 1990 (Refurbished)</h3>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-[#303030] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-3 sm:p-4">
+                    <img src="{{ asset('/img/kasau/subCompany/UD QUESTER.jpg') }}" alt="Split Stone"
+                        class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white font-inter mb-3 sm:mb-4">UD QUESTER</h3>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-[#303030] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-3 sm:p-4">
+                    <img src="{{ asset('/img/kasau/subCompany/Kato SS-500SP Rough Terrain Crane.jpg') }}" alt="Split Stone"
+                        class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white font-inter mb-3 sm:mb-4">Kato SS-500SP Rough Terrain Crane</h3>
+                    </div>
+                </div>
+
+
+                <div
+                    class="bg-[#303030] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-3 sm:p-4">
+                    <img src="{{ asset('/img/kasau/subCompany/Mitsubishi FD-40-KT Diesel Forklift Truck (2001).jpg') }}" alt="Split Stone"
+                        class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white font-inter mb-3 sm:mb-4">Mitsubishi FD-40-KT Diesel Forklift Truck (2001)</h3>
+                    </div>
+                </div>
+
+
+                <div
+                    class="bg-[#303030] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-3 sm:p-4">
+                    <img src="{{ asset('/img/kasau/subCompany/Mitsubishi FD30NT Forklift.jpg') }}" alt="Split Stone"
+                        class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white font-inter mb-3 sm:mb-4">Mitsubishi FD30NT Forklift</h3>
+                    </div>
+                </div>
+
+
+                <div
+                    class="bg-[#303030] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-3 sm:p-4">
+                    <img src="{{ asset('/img/kasau/subCompany/Mitsubishi FD100N Pneumatic Tire Forklift.jpg') }}" alt="Split Stone"
+                        class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white font-inter mb-3 sm:mb-4">Mitsubishi FD100N Pneumatic Tire Forklift</h3>
+                    </div>
+                </div>
+
+
+                <div
+                    class="bg-[#303030] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-3 sm:p-4">
+                    <img src="{{ asset('/img/kasau/subCompany/CATERPILLAR DP50K Diesel Forklift.jpg') }}" alt="Split Stone"
+                        class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white font-inter mb-3 sm:mb-4">CATERPILLAR DP50K Diesel Forklift</h3>
+                    </div>
+                </div>
+
+
+                <div
+                    class="bg-[#303030] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden p-3 sm:p-4">
+                    <img src="{{ asset('/img/kasau/subCompany/SANY SY215c.png') }}" alt="Split Stone"
+                        class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white font-inter mb-3 sm:mb-4">SANY SY215c</h3>
+                    </div>
+                </div>
+            </div>
         </section>
 
         @include('components.kasau.footer')

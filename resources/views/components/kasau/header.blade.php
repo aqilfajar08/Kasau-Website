@@ -87,7 +87,7 @@
                     <!-- Logo -->
                     <a href="#home" class="cursor-pointer">
                         <img src="{{ asset('img/kasau/logo/logo.svg') }}" alt="Logo"
-                            class="scale-150 h-8 md:h-10 transition-all">
+                            class="scale-150 md:h-10 transition-all">
                     </a>
 
                     <!-- Mobile Menu Button -->

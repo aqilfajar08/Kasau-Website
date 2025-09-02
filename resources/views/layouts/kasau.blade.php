@@ -18,8 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- Scripts and Styles -->
-    <link rel="stylesheet" href="{{ asset('public/build/assets/app-DfLtbH02.css') }}">
-    <script src="{{ asset('public/build/assets/app-DVMFqpJC.js') }}" defer></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="font-sans antialiased">
     <div class="min-h-screen">
